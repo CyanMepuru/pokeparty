@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PokéParty — Démo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- Firebase (remplace BroadcastChannel pour la synchro multi-appareils) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<style>
+  :root{
+    --bg: #171426;
+    --panel: #221E38;
+    --panel-2: #2A2545;
+    --line: #3A3460;
+    --text: #F1EEFB;
+    --muted: #9A93C2;
+    --pika: #FFD23F;
+    --pika-dark: #C79A00;
+    --pokeball: #EF4655;
+    --pokeball-dark: #B22C3A;
+    --grass: #3DDC97;
+    --water: #4FA6FF;
+    --radius: 18px;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 15% 10%, #241f42 0%, transparent 45%),
+      radial-gradient(circle at 85% 90%, #1c2a45 0%, transparent 50%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Nunito Sans', sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+  }
+  h1,h2,h3,.display{ font-family:'Fredoka', sans-serif; }
+
+  .app{ max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; position:relative; z-index:2;}
+
+  .brand{ display:flex; align-items:center; gap:12px; margin-bottom: 34px; }
+  .brand .ball{
+    width:38px; height:38px; border-radius:50%;
+    background: linear-gradient(180deg, var(--pokeball) 0 48%, var(--line) 48% 52%, #fff 52% 100%);
+    border: 3px solid #100e1c;
+    position:relative; flex-shrink:0;
+  }
+  .brand .ball::after{
+    content:""; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:12px; height:12px; border-radius:50%; background:#100e1c; border:3px solid #fff;
+  }
+  .brand h1{ font-size: 26px; margin:0; letter-spacing:0.3px; }
+  .brand span{ color: var(--pika); }
+
+  .card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  .card h2{ margin-top:0; font-size:20px; }
+  .muted{ color:var(--muted); font-size: 14px; }
+
+  .row{ display:flex; gap:12px; flex-wrap:wrap; }
+  .col{ flex:1 1 220px; }
+
+  label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; font-weight:700; text-transform:uppercase; letter-spacing:0.4px;}
+  input[type=text]{
+    width:100%; padding: 13px 14px; border-radius: 12px; border: 1.5px solid var(--line);
+    background: var(--panel-2); color: var(--text); font-size:16px; font-family:inherit;
+    outline:none; transition: border-color .15s;
+  }
+  input[type=text]:focus{ border-color: var(--pika); }
+  input[type=text]::placeholder{ color:#6c6596; }
+
+  button{
+    font-family: 'Fredoka', sans-serif; font-weight:600; font-size:16px;
+    border:none; border-radius: 12px; padding: 13px 20px; cursor:pointer;
+    transition: transform .08s ease, filter .15s;
+  }
+  button:active{ transform: scale(0.97); }
+  .btn-primary{ background: var(--pika); color:#241c00; }
+  .btn-primary:hover{ filter:brightness(1.08); }
+  .btn-secondary{ background: transparent; color: var(--text); border: 1.5px solid var(--line); }
+  .btn-secondary:hover{ border-color: var(--pika); }
+  .btn-danger{ background: var(--pokeball); color:#fff; }
+  button:disabled{ opacity:.4; cursor:not-allowed; }
+
+  .code-pill{
+    display:inline-flex; align-items:center; gap:10px; background: var(--panel-2);
+    border:1.5px dashed var(--pika); border-radius: 14px; padding: 10px 18px;
+    font-family:'Fredoka'; font-size: 24px; letter-spacing: 6px; font-weight:700; color:var(--pika);
+  }
+
+  .player-list{ display:flex; flex-direction:column; gap:8px; margin-top: 16px; }
+  .player-row{
+    display:flex; align-items:center; gap:10px; background:var(--panel-2);
+    padding: 10px 14px; border-radius: 12px; border:1px solid var(--line);
+  }
+  .dot{ width:12px; height:12px; border-radius:50%; flex-shrink:0; }
+  .player-row .pname{ font-weight:700; flex:1; }
+  .player-row .score{ font-family:'Fredoka'; color: var(--pika); }
+
+  .hidden{ display:none !important; }
+
+  .qbar{ display:flex; justify-content:space-between; align-items:center; margin-bottom: 14px; }
+  .qbar .tag{ font-size:12px; text-transform:uppercase; letter-spacing:0.5px; color:var(--muted); font-weight:800; }
+  .timerwrap{ height:8px; border-radius:6px; background:var(--panel-2); overflow:hidden; margin-bottom:22px; }
+  .timerfill{ height:100%; background: linear-gradient(90deg, var(--grass), var(--pika)); width:100%; transition: width 0.1s linear; }
+
+  .question-text{ font-size: 22px; font-weight:700; margin: 0 0 22px; line-height:1.35; }
+
+  .choices{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width:520px){ .choices{ grid-template-columns: 1fr; } }
+  .choice{
+    text-align:left; background: var(--panel-2); border: 1.5px solid var(--line);
+    color: var(--text); padding: 16px; font-size:16px; font-family:'Nunito Sans'; font-weight:700;
+    border-radius: 14px; display:flex; align-items:center; gap:10px;
+  }
+  .choice .letter{
+    width:26px; height:26px; border-radius:50%; background:var(--line); color:var(--text);
+    display:flex; align-items:center; justify-content:center; font-family:'Fredoka'; font-size:14px; flex-shrink:0;
+  }
+  .choice:hover:not(:disabled){ border-color: var(--pika); }
+  .choice.selected{ border-color: var(--pika); background: #3a3220; }
+  .choice.correct{ border-color: var(--grass); background: #163a2c; }
+  .choice.wrong{ border-color: var(--pokeball); background: #3a1620; }
+
+  .leaderboard-item{
+    display:flex; align-items:center; gap:14px; padding: 12px 16px;
+    background: var(--panel-2); border-radius: 14px; margin-bottom:10px; border:1px solid var(--line);
+  }
+  .leaderboard-item .rank{
+    font-family:'Fredoka'; font-size:18px; width:28px; text-align:center; color: var(--pika);
+  }
+  .leaderboard-item.top1{ border-color: var(--pika); }
+
+  /* live cursors */
+  .cursor{
+    position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+    transform: translate(-2px,-2px); transition: left .06s linear, top .06s linear;
+  }
+  .cursor svg{ filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5)); }
+  .cursor .clabel{
+    font-family:'Fredoka'; font-size:12px; font-weight:600; padding:2px 8px; border-radius:8px;
+    margin-left: 16px; margin-top:-6px; display:inline-block; color:#111; white-space:nowrap;
+  }
+
+  footer{ text-align:center; color:var(--muted); font-size:13px; margin-top: 30px; }
+  code{ background: var(--panel-2); padding:2px 6px; border-radius:6px; }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="brand"><div class="ball"></div><h1>Poké<span>Party</span></h1></div>
+
+  <!-- ÉCRAN ACCUEIL -->
+  <div id="screen-home">
+    <div class="card">
+      <h2>Créer une partie</h2>
+      <p class="muted">Tu deviens l'hôte : tu contrôles le rythme du quiz depuis cet onglet.</p>
+      <div class="row">
+        <div class="col">
+          <label>Ton pseudo</label>
+          <input type="text" id="host-name" placeholder="Ex: Sacha">
+        </div>
+      </div>
+      <br>
+      <button class="btn-primary" onclick="createRoom()">Créer la partie</button>
+    </div>
+
+    <div class="card">
+      <h2>Rejoindre une partie</h2>
+      <p class="muted">Ouvre ce fichier dans un autre onglet et rejoins avec le code affiché chez l'hôte.</p>
+      <div class="row">
+        <div class="col">
+          <label>Ton pseudo</label>
+          <input type="text" id="join-name" placeholder="Ex: Ondine">
+        </div>
+        <div class="col">
+          <label>Code de la partie</label>
+          <input type="text" id="join-code" placeholder="Ex: PIKA" maxlength="4" style="text-transform:uppercase">
+        </div>
+      </div>
+      <br>
+      <button class="btn-primary" onclick="joinRoom()">Rejoindre</button>
+    </div>
+
+    <footer>Démo locale (BroadcastChannel) — ouvre plusieurs onglets du <b>même navigateur</b> pour tester à plusieurs, curseurs inclus.</footer>
+  </div>
+
+  <!-- ÉCRAN SALON D'ATTENTE -->
+  <div id="screen-lobby" class="hidden">
+    <div class="card">
+      <h2 id="lobby-title">Salon d'attente</h2>
+      <p class="muted">Code de la partie — partage-le aux autres joueurs :</p>
+      <div class="code-pill" id="room-code-display">----</div>
+      <div class="player-list" id="lobby-players"></div>
+      <br>
+      <div id="host-controls" class="hidden">
+        <button class="btn-primary" onclick="startQuiz()">Démarrer le quiz</button>
+      </div>
+      <p id="waiting-msg" class="muted hidden">En attente que l'hôte lance la partie…</p>
+    </div>
+  </div>
+
+  <!-- ÉCRAN QUIZ -->
+  <div id="screen-quiz" class="hidden">
+    <div class="card">
+      <div class="qbar">
+        <span class="tag" id="q-progress">Question 1/8</span>
+        <span class="tag" id="q-timer-label">10s</span>
+      </div>
+      <div class="timerwrap"><div class="timerfill" id="timer-fill"></div></div>
+      <h3 class="question-text" id="q-text">Chargement…</h3>
+      <div class="choices" id="q-choices"></div>
+      <div id="host-next-wrap" class="hidden" style="margin-top:20px;">
+        <button class="btn-secondary" onclick="hostNext()">Question suivante →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÉCRAN CLASSEMENT -->
+  <div id="screen-board" class="hidden">
+    <div class="card">
+      <h2 id="board-title">Classement</h2>
+      <div id="board-list"></div>
+      <div id="host-restart-wrap" class="hidden" style="margin-top:16px;">
+        <button class="btn-secondary" onclick="location.reload()">Nouvelle partie</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ CONFIG FIREBASE ============ */
+/* Colle ici l'objet copié depuis la console Firebase (étape 3 du guide) */
+const firebaseConfig = {
+  apiKey: "COLLE_TA_CLE_ICI",
+  authDomain: "TON-PROJET.firebaseapp.com",
+  databaseURL: "https://TON-PROJET-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "TON-PROJET",
+  storageBucket: "TON-PROJET.appspot.com",
+  messagingSenderId: "000000000000",
+  appId: "1:000000000000:web:xxxxxxxxxxxxxxxx"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+/* ============ QUESTIONS (à personnaliser librement) ============ */
+const QUESTIONS = [
+  { q: "Quel type est fort contre les Pokémon Eau ?", choices:["Feu","Plante","Vol","Insecte"], correct: 1 },
+  { q: "Combien de Pokémon de type starter existent dans la 1ère génération ?", choices:["2","3","4","6"], correct: 1 },
+  { q: "Quel est le nom du rival de Sacha dans le dessin animé ?", choices:["Régis","Pierre","Ondine","Giovanni"], correct: 0 },
+  { q: "De quel Pokémon Dracaufeu est-il l'évolution finale ?", choices:["Salamèche","Carapuce","Bulbizarre","Rondoudou"], correct: 0 },
+  { q: "Quelle ville abrite l'Arène de type Roche dans Kanto ?", choices:["Argenta","Céladopole","Jadielle","Azuria"], correct: 0 },
+  { q: "Combien de badges faut-il pour défier la Ligue Pokémon (Kanto) ?", choices:["6","8","10","4"], correct: 1 },
+  { q: "Quel objet permet de faire évoluer Évoli en Noctali ?", choices:["Pierre Lune","Pierre Feu","Échange de nuit","Pierre Nuit"], correct: 2 },
+  { q: "Qui est le champion de la Ligue Pokémon de Kanto ?", choices:["Peter","Régis","Blue","Gary"], correct: 0 },
+];
+const QUESTION_TIME = 12; // secondes
+
+/* ============ ÉTAT ============ */
+let room = { code:null, isHost:false, myName:null, players:[], scores:{} };
+let channel = null;
+let quizState = { index:-1, answered:false, startTime:0, timerInt:null, colorMap:{} };
+const PALETTE = ["#FFD23F","#4FA6FF","#3DDC97","#EF4655","#B084EF","#FF9F5A","#5AD1E6","#FF6FA0"];
+
+function colorFor(name){
+  if(!quizState.colorMap[name]){
+    const idx = Object.keys(quizState.colorMap).length % PALETTE.length;
+    quizState.colorMap[name] = PALETTE[idx];
+  }
+  return quizState.colorMap[name];
+}
+
+function genCode(){
+  const letters = "ABCDEFGHJKLMNPQRSTUVWXYZ";
+  let c = "";
+  for(let i=0;i<4;i++) c += letters[Math.floor(Math.random()*letters.length)];
+  return c;
+}
+
+function show(id){
+  ["screen-home","screen-lobby","screen-quiz","screen-board"].forEach(s=>{
+    document.getElementById(s).classList.toggle("hidden", s!==id);
+  });
+}
+
+/* ============ CONNEXION À LA PARTIE (Firebase Realtime Database) ============ */
+let roomRef = null;
+let eventsRef = null;
+let cursorsRef = null;
+let sessionStartTs = 0; // pour ignorer les vieux événements rejoués au (re)branchement
+
+function connectChannel(code, isCreator){
+  roomRef = db.ref("rooms/" + code);
+  eventsRef = roomRef.child("events");
+  cursorsRef = roomRef.child("cursors");
+
+  const afterAttach = ()=>{
+    sessionStartTs = Date.now();
+    eventsRef.on("child_added", (snap)=>{
+      const msg = snap.val();
+      if(!msg || msg._ts < sessionStartTs) return; // on ignore l'historique déjà rejoué
+      handleMessage(msg);
+    });
+    cursorsRef.on("value", (snap)=>{
+      const all = snap.val() || {};
+      Object.entries(all).forEach(([name, pos])=>{
+        if(name !== room.myName) renderCursor(name, pos.x, pos.y);
+      });
+    });
+  };
+
+  if(isCreator){
+    // Nouvelle partie : on repart d'une base propre pour ce code
+    roomRef.remove().then(afterAttach);
+  } else {
+    afterAttach();
+  }
+}
+
+function broadcast(msg){
+  if(msg.type === "cursor"){
+    cursorsRef.child(sanitizeKey(msg.name)).set({x: msg.x, y: msg.y});
+    return;
+  }
+  eventsRef.push({...msg, _ts: Date.now()});
+}
+
+function sanitizeKey(name){
+  // Firebase interdit certains caractères (. # $ [ ]) dans les clés
+  return name.replace(/[.#$\[\]]/g, "_");
+}
+
+/* ============ CRÉATION / JOIN ============ */
+function createRoom(){
+  const name = document.getElementById("host-name").value.trim() || "Hôte";
+  room.code = genCode();
+  room.isHost = true;
+  room.myName = name;
+  room.players = [name];
+  room.scores = {[name]:0};
+  connectChannel(room.code, true);
+  colorFor(name);
+  document.getElementById("room-code-display").textContent = room.code;
+  document.getElementById("lobby-title").textContent = "Salon — tu es l'hôte";
+  document.getElementById("host-controls").classList.remove("hidden");
+  document.getElementById("waiting-msg").classList.add("hidden");
+  renderLobbyPlayers();
+  show("screen-lobby");
+  initCursorTracking();
+}
+
+function joinRoom(){
+  const name = document.getElementById("join-name").value.trim() || "Joueur";
+  const code = document.getElementById("join-code").value.trim().toUpperCase();
+  if(code.length !== 4){ alert("Code invalide (4 lettres)"); return; }
+  room.code = code;
+  room.isHost = false;
+  room.myName = name;
+  connectChannel(code, false);
+  colorFor(name);
+  broadcast({type:"join", name});
+  document.getElementById("room-code-display").textContent = code;
+  document.getElementById("lobby-title").textContent = "Salon d'attente";
+  document.getElementById("waiting-msg").classList.remove("hidden");
+  show("screen-lobby");
+  initCursorTracking();
+}
+
+function renderLobbyPlayers(){
+  const el = document.getElementById("lobby-players");
+  el.innerHTML = "";
+  room.players.forEach(p=>{
+    const row = document.createElement("div");
+    row.className = "player-row";
+    row.innerHTML = `<span class="dot" style="background:${colorFor(p)}"></span><span class="pname">${p}${p===room.myName?" (toi)":""}</span>`;
+    el.appendChild(row);
+  });
+}
+
+/* ============ MESSAGES ============ */
+function handleMessage(msg){
+  switch(msg.type){
+    case "join":
+      if(room.isHost){
+        if(!room.players.includes(msg.name)){
+          room.players.push(msg.name);
+          room.scores[msg.name] = 0;
+        }
+        broadcast({type:"players", players:room.players});
+        renderLobbyPlayers();
+      }
+      break;
+    case "players":
+      room.players = msg.players;
+      msg.players.forEach(p=>{ if(!(p in room.scores)) room.scores[p]=0; });
+      renderLobbyPlayers();
+      break;
+    case "start":
+      quizState.index = -1;
+      show("screen-quiz");
+      document.getElementById("host-next-wrap").classList.toggle("hidden", !room.isHost);
+      if(!room.isHost) renderQuestion(msg.index);
+      break;
+    case "question":
+      renderQuestion(msg.index);
+      break;
+    case "answer":
+      if(room.isHost){
+        recordAnswer(msg.name, msg.choice, msg.elapsed);
+      }
+      break;
+    case "reveal":
+      room.scores = msg.scores;
+      showReveal(msg.correct);
+      break;
+    case "board":
+      room.scores = msg.scores;
+      renderBoard(msg.final);
+      break;
+  }
+}
+
+/* ============ LANCEMENT DU QUIZ ============ */
+function startQuiz(){
+  broadcast({type:"start", index:0});
+  quizState.index = -1;
+  show("screen-quiz");
+  document.getElementById("host-next-wrap").classList.remove("hidden");
+  goToQuestion(0);
+}
+
+function goToQuestion(i){
+  quizState.index = i;
+  quizState.answered = false;
+  quizState.answersThisRound = {};
+  broadcast({type:"question", index:i});
+  renderQuestion(i);
+}
+
+function hostNext(){
+  const next = quizState.index + 1;
+  if(next >= QUESTIONS.length){
+    const final = Object.entries(room.scores).sort((a,b)=>b[1]-a[1]);
+    broadcast({type:"board", scores:room.scores, final:true});
+    renderBoard(true);
+  } else {
+    goToQuestion(next);
+  }
+}
+
+/* ============ AFFICHAGE QUESTION ============ */
+function renderQuestion(i){
+  quizState.index = i;
+  const data = QUESTIONS[i];
+  document.getElementById("q-progress").textContent = `Question ${i+1}/${QUESTIONS.length}`;
+  document.getElementById("q-text").textContent = data.q;
+  const box = document.getElementById("q-choices");
+  box.innerHTML = "";
+  const letters = ["A","B","C","D"];
+  data.choices.forEach((c, idx)=>{
+    const b = document.createElement("button");
+    b.className = "choice";
+    b.innerHTML = `<span class="letter">${letters[idx]}</span><span>${c}</span>`;
+    b.onclick = ()=> selectAnswer(idx, b);
+    box.appendChild(b);
+  });
+  quizState.startTime = Date.now();
+  quizState.answered = false;
+  runTimer();
+}
+
+function runTimer(){
+  clearInterval(quizState.timerInt);
+  const fill = document.getElementById("timer-fill");
+  const label = document.getElementById("q-timer-label");
+  fill.style.width = "100%";
+  quizState.timerInt = setInterval(()=>{
+    const elapsed = (Date.now() - quizState.startTime)/1000;
+    const pct = Math.max(0, 1 - elapsed/QUESTION_TIME);
+    fill.style.width = (pct*100)+"%";
+    label.textContent = Math.ceil(QUESTION_TIME - elapsed) + "s";
+    if(pct<=0){
+      clearInterval(quizState.timerInt);
+      if(!quizState.answered) lockChoices();
+    }
+  }, 100);
+}
+
+function selectAnswer(idx, btnEl){
+  if(quizState.answered) return;
+  quizState.answered = true;
+  const elapsed = (Date.now()-quizState.startTime)/1000;
+  [...document.querySelectorAll(".choice")].forEach(b=>b.disabled=true);
+  btnEl.classList.add("selected");
+  broadcast({type:"answer", name:room.myName, choice:idx, elapsed});
+  if(room.isHost) recordAnswer(room.myName, idx, elapsed);
+}
+
+function lockChoices(){
+  [...document.querySelectorAll(".choice")].forEach(b=>b.disabled=true);
+}
+
+function recordAnswer(name, choice, elapsed){
+  if(!quizState.answersThisRound) quizState.answersThisRound = {};
+  if(quizState.answersThisRound[name]) return;
+  quizState.answersThisRound[name] = true;
+  const correct = QUESTIONS[quizState.index].correct;
+  if(choice === correct){
+    const speedBonus = Math.max(0, Math.round((QUESTION_TIME - elapsed) * 5));
+    room.scores[name] = (room.scores[name]||0) + 100 + speedBonus;
+  }
+  const answeredCount = Object.keys(quizState.answersThisRound).length;
+  if(answeredCount >= room.players.length){
+    clearInterval(quizState.timerInt);
+    broadcast({type:"reveal", correct, scores:room.scores});
+    showReveal(correct);
+  }
+}
+
+function showReveal(correctIdx){
+  [...document.querySelectorAll(".choice")].forEach((b,idx)=>{
+    b.disabled = true;
+    if(idx===correctIdx) b.classList.add("correct");
+    else if(b.classList.contains("selected")) b.classList.add("wrong");
+  });
+}
+
+/* ============ CLASSEMENT ============ */
+function renderBoard(final){
+  show("screen-board");
+  document.getElementById("board-title").textContent = final ? "🏆 Classement final" : "Classement";
+  const list = document.getElementById("board-list");
+  list.innerHTML = "";
+  const sorted = Object.entries(room.scores).sort((a,b)=>b[1]-a[1]);
+  sorted.forEach(([name,score], i)=>{
+    const row = document.createElement("div");
+    row.className = "leaderboard-item" + (i===0?" top1":"");
+    row.innerHTML = `<span class="rank">#${i+1}</span><span class="dot" style="background:${colorFor(name)}"></span><span class="pname" style="flex:1;font-weight:700">${name}</span><span class="score" style="font-family:Fredoka">${score} pts</span>`;
+    list.appendChild(row);
+  });
+  document.getElementById("host-restart-wrap").classList.toggle("hidden", !room.isHost);
+}
+
+/* ============ CURSEURS EN DIRECT ============ */
+let cursorEls = {};
+function initCursorTracking(){
+  let lastSent = 0;
+  window.addEventListener("mousemove", (e)=>{
+    const now = Date.now();
+    if(now - lastSent < 40) return; // throttle ~25fps
+    lastSent = now;
+    const x = e.clientX / window.innerWidth;
+    const y = e.clientY / window.innerHeight;
+    broadcast({type:"cursor", name:room.myName, x, y});
+  });
+}
+
+function renderCursor(name, x, y){
+  if(name === room.myName) return;
+  let el = cursorEls[name];
+  if(!el){
+    el = document.createElement("div");
+    el.className = "cursor";
+    const color = colorFor(name);
+    el.innerHTML = `
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M2 2 L18 9 L10 11 L8 19 Z" fill="${color}" stroke="#171426" stroke-width="1.5"/>
+      </svg>
+      <span class="clabel" style="background:${color}">${name}</span>`;
+    document.body.appendChild(el);
+    cursorEls[name] = el;
+  }
+  el.style.left = (x*window.innerWidth)+"px";
+  el.style.top = (y*window.innerHeight)+"px";
+}
+</script>
+</body>
+</html>
