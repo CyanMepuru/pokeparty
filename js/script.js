@@ -190,6 +190,7 @@ function updateAllTexts() {
     startQuizBtn.textContent = texts.startQuizBtn[currentLang];
     lobbyWaiting.textContent = texts.lobbyWaiting[currentLang];
     if (room.players && room.players.length) renderPlayerList();
+    if (room.isHost) checkAllReady();
 
     if (quizState.recipe) {
         progressEl.textContent = `${texts.question[currentLang]} ${quizState.index + 1}/${quizState.total}`;
@@ -219,13 +220,31 @@ function updateScoreDisplay() {
 }
 
 // ======================== État de la partie (multijoueur) ========================
-let room = { code: null, isHost: false, myName: null, players: [], scores: {}, regions: [], rounds: 10 };
+let room = { code: null, isHost: false, myName: null, players: [], scores: {}, regions: [], rounds: 10, readyPlayers: {} };
 let quizState = { index: -1, total: 10, answered: false, startTime: 0, timerInt: null, recipe: null, answersThisRound: {} };
 let colorMap = {};
 const PALETTE = ["#667eea", "#e67e22", "#27ae60", "#e74c3c", "#8e44ad", "#16a085", "#2980b9", "#d35400"];
 function colorFor(name) {
     if (!colorMap[name]) colorMap[name] = PALETTE[Object.keys(colorMap).length % PALETTE.length];
     return colorMap[name];
+}
+
+function checkAllReady() {
+    if (!room.isHost) return;
+    const readyHint = document.getElementById("ready-hint");
+    const allReady = room.players.length > 0 && room.players.every(p => room.readyPlayers[p]);
+    startQuizBtn.disabled = !allReady;
+    if (!readyHint) return;
+    if (allReady) {
+        readyHint.style.display = "none";
+    } else {
+        const missing = room.players.filter(p => !room.readyPlayers[p]);
+        const prefix = currentLang === "fr" ? "En attente du chargement chez : "
+                      : currentLang === "es" ? "Esperando a que carguen los datos: "
+                      : "Waiting for data to load for: ";
+        readyHint.textContent = prefix + missing.join(", ");
+        readyHint.style.display = "block";
+    }
 }
 
 // ======================== Connexion Firebase ========================
@@ -296,7 +315,8 @@ createRoomBtn.onclick = async () => {
 
     await loadGameData(room.regions);
     loadingHint.style.display = "none";
-    startQuizBtn.disabled = false;
+    room.readyPlayers[room.myName] = true;
+    checkAllReady();
 };
 
 joinRoomBtn.onclick = () => {
@@ -337,6 +357,22 @@ function renderPlayerList() {
 }
 
 // ======================== Messages reçus ========================
+let pendingRender = null;
+
+function tryRenderPending() {
+    if (!pendingRender) return;
+    if (!data) {
+        // Les données locales ne sont pas encore chargées : on patiente, on réessaiera
+        // dès que loadGameData() aura fini (voir case "players").
+        loadingHint.style.display = "block";
+        return;
+    }
+    const { index, recipe } = pendingRender;
+    pendingRender = null;
+    showScreen(quizScreen);
+    renderQuestion(index, recipe);
+}
+
 function handleMessage(msg) {
     switch (msg.type) {
         case "join":
@@ -347,6 +383,7 @@ function handleMessage(msg) {
                 }
                 broadcast({ type: "players", players: room.players, regions: room.regions, rounds: room.rounds });
                 renderPlayerList();
+                checkAllReady();
             }
             break;
 
@@ -358,17 +395,27 @@ function handleMessage(msg) {
             msg.players.forEach(p => { if (!(p in room.scores)) room.scores[p] = 0; });
             renderPlayerList();
             if (!room.isHost && !data) {
-                loadGameData(room.regions).then(() => { loadingHint.style.display = "none"; });
+                loadGameData(room.regions).then(() => {
+                    loadingHint.style.display = "none";
+                    broadcast({ type: "ready", name: room.myName });
+                    tryRenderPending();
+                });
             }
             break;
 
+        case "ready":
+            room.readyPlayers[msg.name] = true;
+            checkAllReady();
+            break;
+
         case "start":
-            showScreen(quizScreen);
-            renderQuestion(0, msg.recipe);
+            pendingRender = { index: 0, recipe: msg.recipe };
+            tryRenderPending();
             break;
 
         case "question":
-            renderQuestion(msg.index, msg.recipe);
+            pendingRender = { index: msg.index, recipe: msg.recipe };
+            tryRenderPending();
             break;
 
         case "answer":
