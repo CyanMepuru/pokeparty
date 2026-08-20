@@ -1,0 +1,747 @@
+{
+    "Pokemons": [
+        {
+            "id": 1,
+            "name": {
+                "en": "Bulbasaur",
+                "fr": "Bulbizarre",
+                "es": "Bulbasaur"
+            }, 
+            "type": [5, 8],
+            "abilities": [34, 65],
+            "height": 0.7,
+            "weight": 6.9,
+            "eggGroups": [1, 12],
+            "description": {
+                "en": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
+                "fr": "Une étrange graine a été plantée sur son dos à la naissance. La plante pousse avec ce Pokémon.",
+                "es": "Una extraña semilla fue plantada en su espalda al nacer. La planta brota y crece con este Pokémon."
+            },
+            "baseStats": {
+                "hp": 45,
+                "attack": 49,
+                "defense": 49,
+                "specialAttack": 65,
+                "specialDefense": 65,
+                "speed": 45
+            },
+            "evolution": [2],
+            "picture": "bulbasaur.png",
+            "icon": "bulbasaur_icon.png"
+        },
+        {
+            "id": 2,
+            "name": {
+                "en": "Ivysaur",
+                "fr": "Herbizarre",
+                "es": "Ivysaur"
+            },
+            "type": [5, 8],
+            "abilities": [34, 65],
+            "height": 1.0,
+            "weight": 13.0,
+            "eggGroups": [1, 12],
+            "description": {
+                "en": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+                "fr": "Quand la bulbe sur son dos grandit, il perd la possibilité de se tenir sur ses jambes arrières.",
+                "es": "Cuando la flor en su espalda crece, pierde la capacidad de estar quieto con las patas posteriores."
+            },
+            "baseStats": {
+                "hp": 60,
+                "attack": 62,
+                "defense": 63,
+                "specialAttack": 80,
+                "specialDefense": 80,
+                "speed": 60
+            },
+            "evolution": [3],
+            "picture": "ivysaur.png",
+            "icon": "ivysaur_icon.png"
+        },
+        {
+            "id": 3,
+            "name": {
+                "en": "Venusaur",
+                "fr": "Florizarre",
+                "es": "Venusaur"
+            },
+            "type": [5, 8],
+            "abilities": [34, 65],
+            "height": 2.0,
+            "weight": 100.0,
+            "eggGroups": [1, 12],
+            "description": {
+                "en": "The flower on its back grows by the time this Pokémon is full grown.",
+                "fr": "Une belle fleur se trouve sur son dos. Elle prend une couleur vive lorsqu'elle est bien nourrie et bien ensoleillée. Le parfum de cette fleur peut apaiser les gens.",
+                "es": "La flor en su espalda crece mientras este Pokémon crece. La flor en su espalda crece mientras este Pokémon crece."
+            },
+            "baseStats": {
+                "hp": 80,
+                "attack": 82,
+                "defense": 83,
+                "specialAttack": 100,
+                "specialDefense": 100,
+                "speed": 80
+            },
+            "picture": "venusaur.png",
+            "icon": "venusaur_icon.png"
+        },
+        {
+            "id": 4,
+            "name": {
+                "en": "Charmander",
+                "fr": "Salamèche",
+                "es": "Charmander"
+            },
+            "type": [2],
+            "abilities": [66, 94],
+            "height": 0.6,
+            "weight": 8.5,
+            "eggGroups": [1, 13],
+            "description": {
+                "en": "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+                "fr": "Il a une préférence pour les choses chaudes. Lorsqu'il pleut, on dit que le vapeur sort de la pointe de sa queue.",
+                "es": "Tiene una preferencia por cosas calientes. Cuando llueve, se dice que salen vapores de la punta de su cola."
+            },
+            "baseStats": {
+                "hp": 39,
+                "attack": 52,
+                "defense": 43,
+                "specialAttack": 60,
+                "specialDefense": 50,
+                "speed": 65
+            },
+            "evolution": [5],
+            "picture": "charmander.png",
+            "icon": "charmander_icon.png"
+        },
+        {
+            "id": 5,
+            "name": {
+                "en": "Charmeleon",
+                "fr": "Reptincel",
+                "es": "Charmeleon"
+            },
+            "type": [2],
+            "abilities": [66, 94],
+            "height": 1.1,
+            "weight": 19.0,
+            "eggGroups": [1, 13],
+            "description": {
+                "en": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+                "fr": "Lorsqu'il agite sa queue enflammée, il élève la température à des niveaux insupportablement élevés.",
+                "es": "Cuando agita su cola ardiente, eleva la temperatura a niveles insoportablemente altos."
+            },
+            "baseStats": {
+                "hp": 58,
+                "attack": 64,
+                "defense": 58,
+                "specialAttack": 80,
+                "specialDefense": 65,
+                "speed": 80
+            },
+            "evolution": [6],
+            "picture": "charmeleon.png",
+            "icon": "charmeleon_icon.png"
+        },
+        {
+            "id": 6,
+            "name": {
+                "en": "Charizard",
+                "fr": "Dracaufeu",
+                "es": "Charizard"
+            },
+            "type": [2, 10],
+            "abilities": [66, 94],
+            "height": 1.7,
+            "weight": 90.5,
+            "eggGroups": [1, 13],
+            "description": {
+                "en": "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
+                "fr": "Il projette des flammes suffisamment chaudes pour fondre des rochers. Il peut causer des incendies forestiers en enjouant des flammes.",
+                "es": "Lanza llamas suficientemente calientes para derretir rocas. Puede causar incendios forestales al lanzar llamas."
+            },
+            "baseStats": {
+                "hp": 78,
+                "attack": 84,
+                "defense": 78,
+                "specialAttack": 109,
+                "specialDefense": 85,
+                "speed": 100
+            },
+            "picture": "charizard.png",
+            "icon": "charizard_icon.png"
+        },
+        {
+            "id": 7,
+            "name": {
+                "en": "Squirtle",
+                "fr": "Carapuce",
+                "es": "Squirtle"
+            },
+            "type": [3],
+            "abilities": [44, 67],
+            "height": 0.5,
+            "weight": 9.0,
+            "eggGroups": [1, 3],
+            "description": {
+                "en": "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
+                "fr": "Lorsqu'il rétracte son long cou dans sa carapace, il projette de l'eau avec une force vigoureuse.",
+                "es": "Cuando retrae su largo cuello en su caparazón, expulsa agua con vigorosa fuerza."
+            },
+            "baseStats": {
+                "hp": 44,
+                "attack": 48,
+                "defense": 65,
+                "specialAttack": 50,
+                "specialDefense": 64,
+                "speed": 43
+            },
+            "evolution": [8],
+            "picture": "squirtle.png",
+            "icon": "squirtle_icon.png"
+        },
+        {
+            "id": 8,
+            "name": {
+                "en": "Wartortle",
+                "fr": "Tortank",
+                "es": "Wartortle"
+            },
+            "type": [3],
+            "abilities": [44, 67],
+            "height": 1.0,
+            "weight": 22.5,
+            "eggGroups": [1, 3],
+            "description": {
+                "en": "It is recognized as a symbol of longevity. If its shell is broken, this POKEMON will appear to have no body.",
+                "fr": "Il est reconnu comme un symbole de longevité. Si sa carapace se brise, ce POKEMON ne sera pas visible.",
+                "es": "Se reconoce como un simbolo de longevidad. Si su caparazón se rompe, este POKEMON no se vera visible."
+            },
+            "baseStats": {
+                "hp": 59,
+                "attack": 63,
+                "defense": 80,
+                "specialAttack": 65,
+                "specialDefense": 80,
+                "speed": 58
+            },
+            "evolution": [9],
+            "picture": "wartortle.png",
+            "icon": "wartortle_icon.png"
+        },
+        {
+            "id": 9,
+            "name": {
+                "en": "Blastoise",
+                "fr": "Tortank",
+                "es": "Blastoise"
+            },
+            "type": [3],
+            "abilities": [44, 67],
+            "height": 1.6,
+            "weight": 85.5,
+            "eggGroups": [1, 3],
+            "description": {
+                "en": "It crushes its foe under its heavy body to cause fainting. In battle, it whips its body around and causes confusion.",
+                "fr": "Il frappe son ennemi sous son corps lourd pour le faire tomber. Dans la bataille, il tourne son corps et cause de la confusion.",
+                "es": "Golpea a su oponente con su cuerpo pesado para hacerlo caer. En batalla, gira su cuerpo y causa confusión."
+            },
+            "baseStats": {
+                "hp": 79,
+                "attack": 83,
+                "defense": 100,
+                "specialAttack": 85,
+                "specialDefense": 105,
+                "speed": 78
+            },
+            "picture": "blastoise.png",
+            "icon": "blastoise_icon.png"
+        },
+        {
+            "id": 10,
+            "name": {
+                "en": "Caterpie",
+                "fr": "Chenipan",
+                "es": "Caterpie"
+            },
+            "type": [12],
+            "abilities": [19, 50],
+            "height": 0.3,
+            "weight": 2.9,
+            "eggGroups": [6],
+            "description": {
+                "en": "Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls.",
+                "fr": "Ses petits pieds sont munis de ventouses qui lui permettent de grimper sans relâche les pentes et les murs.",
+                "es": "Sus pies cortos están rematados con ventosas que le permiten trepar incansablemente pendientes y paredes."
+            },
+            "baseStats": {
+                "hp": 45,
+                "attack": 30,
+                "defense": 35,
+                "specialAttack": 20,
+                "specialDefense": 20,
+                "speed": 45
+            },
+            "evolution": [11],
+            "picture": "caterpie.png",
+            "icon": "caterpie_icon.png"
+        },
+        {
+            "id": 11,
+            "name": {
+                "en": "Metapod",
+                "fr": "Chrysacier",
+                "es": "Metapod"
+            },
+            "type": [12],
+            "abilities": [61],
+            "height": 0.7,
+            "weight": 9.9,
+            "eggGroups": [6],
+            "description": {
+                "en": "Inside his hard shell, This POKEMON cells are being completely rebuilt! They often stick together in groups, moving as little as possible so their innards don’t spill out of their shells.",
+                "fr": "Sous sa carapace solide, Ce Pokémon régénère continuellement ses cellules. Il se blottit contre ses congénères et reste immobile pour éviter que le contenu de sa carapace ne s'éparpille au sol.",
+                "es": "Dentro de su caparazón duro, sus celdas se regeneran constantemente! A menudo se unen en grupos, se mueven lo menos posibles para que sus internos no se despeguen de su caparazón."
+            },
+            "baseStats": {
+                "hp": 50,
+                "attack": 20,
+                "defense": 55,
+                "specialAttack": 25,
+                "specialDefense": 25,
+                "speed": 30
+            },
+            "evolution": [12],
+            "picture": "metapod.png",
+            "icon": "metapod_icon.png"
+        },
+        {
+            "id": 12,
+            "name": {
+                "en": "Butterfree",
+                "fr": "Papilusion",
+                "es": "Butterfree"
+            },
+            "type": [12, 10],
+            "abilities": [14, 110],
+            "picture": "butterfree.png",
+            "icon": "butterfree_icon.png"
+        },
+        {
+            "id": 13,
+            "name": {
+                "en": "Weedle",
+                "fr": "Aspicot",
+                "es": "Weedle"
+            },
+            "type": [12, 8],
+            "abilities": [19, 50],
+            "picture": "weedle.png",
+            "icon": "weedle_icon.png"
+        },
+        {
+            "id": 14,
+            "name": {
+                "en": "Kakuna",
+                "fr": "Coconfort",
+                "es": "Kakuna"
+            },
+            "type": [12, 8],
+            "abilities": [61],
+            "picture": "kakuna.png",
+            "icon": "kakuna_icon.png"
+        },
+        {
+            "id": 15,
+            "name": {
+                "en": "Beedrill",
+                "fr": "Dardargnan",
+                "es": "Beedrill"
+            },
+            "type": [12, 8],
+            "abilities": [68, 97],
+            "picture": "beedrill.png",
+            "icon": "beedrill_icon.png"
+        },
+        {
+            "id": 16,
+            "name": {
+                "en": "Pidgey",
+                "fr": "Roucoul",
+                "es": "Pidgey"
+            },
+            "type": [1, 10],
+            "abilities": [51, 77],
+            "picture": "pidgey.png",
+            "icon": "pidgey_icon.png"
+        },
+        {
+            "id": 17,
+            "name": {
+                "en": "Pidgeotto",
+                "fr": "Roucoups",
+                "es": "Pidgeotto"
+            },
+            "type": [1, 10],
+            "abilities": [51, 77],
+            "picture": "pidgeotto.png",
+            "icon": "pidgeotto_icon.png"
+        },
+        {
+            "id": 18,
+            "name": {
+                "en": "Pidgeot",
+                "fr": "Roucarnage",
+                "es": "Pidgeot"
+            },
+            "type": [1, 10],
+            "abilities": [51, 77],
+            "picture": "pidgeot.png",
+            "icon": "pidgeot_icon.png"
+        },
+        {
+            "id": 19,
+            "name": {
+                "en": "Rattata",
+                "fr": "Rattata",
+                "es": "Rattata"
+            },
+            "type": [1],
+            "abilities": [50, 62],
+            "picture": "rattata.png",
+            "icon": "rattata_icon.png"
+        },
+        {
+            "id": 20,
+            "name": {
+                "en": "Raticate",
+                "fr": "Rattatac",
+                "es": "Raticate"
+            },
+            "type": [1],
+            "abilities": [50, 62],
+            "picture": "raticate.png",
+            "icon": "raticate_icon.png"
+        },
+        {
+            "id": 21,
+            "name": {
+                "en": "Spearow",
+                "fr": "Piafabec",
+                "es": "Spearow"
+            },
+            "type": [1, 10],
+            "abilities": [],
+            "picture": "spearow.png",
+            "icon": "spearow_icon.png"
+        },
+        {
+            "id": 22,
+            "name": {
+                "en": "Fearow",
+                "fr": "Rapasdepic",
+                "es": "Fearow"
+            },
+            "type": [1, 10],
+            "abilities": [],
+            "picture": "fearow.png",
+            "icon": "fearow_icon.png"
+        },
+        {
+            "id": 23,
+            "name": {
+                "en": "Ekans",
+                "fr": "Abo",
+                "es": "Ekans"
+            },
+            "type": [8],
+            "abilities": [61],
+            "picture": "ekans.png",
+            "icon": "ekans_icon.png"
+        },
+        {
+            "id": 24,
+            "name": {
+                "en": "Arbok",
+                "fr": "Arbok",
+                "es": "Arbok"
+            },
+            "type": [8],
+            "abilities": [61],
+            "picture": "arbok.png",
+            "icon": "arbok_icon.png"
+        },
+        {
+            "id": 25,
+            "name": {
+                "en": "Pikachu",
+                "fr": "Pikachu",
+                "es": "Pikachu"
+            },
+            "type": [4],
+            "abilities": [],
+            "picture": "pikachu.png",
+            "icon": "pikachu_icon.png"
+        },
+        {
+            "id": 26,
+            "name": {
+                "en": "Raichu",
+                "fr": "Raichu",
+                "es": "Raichu"
+            },
+            "type": [4],
+            "abilities": [],
+            "picture": "raichu.png",
+            "icon": "raichu_icon.png"
+        },
+        {
+            "id": 27,
+            "name": {
+                "en": "Sandshrew",
+                "fr": "Sabelette",
+                "es": "Sandshrew"
+            },
+            "type": [9],
+            "abilities": [],
+            "picture": "sandshrew.png",
+            "icon": "sandshrew_icon.png"
+        },
+        {
+            "id": 28,
+            "name": {
+                "en": "Sandslash",
+                "fr": "Sablaireau",
+                "es": "Sandslash"
+            },
+            "type": [9],
+            "abilities": [],
+            "picture": "sandslash.png",
+            "icon": "sandslash_icon.png"
+        },
+        {
+            "id": 29,
+            "name": {
+                "en": "Nidoran♀",
+                "fr": "Nidoran♀",
+                "es": "Nidoran♀"
+            },
+            "type": [8],
+            "abilities": [],
+            "picture": "nidoran_female.png",
+            "icon": "nidoran_female_icon.png"
+        },
+        {
+            "id": 30,
+            "name": {
+                "en": "Nidorina",
+                "fr": "Nidorina",
+                "es": "Nidorina"
+            },
+            "type": [8],
+            "abilities": [],
+            "picture": "nidorina.png",
+            "icon": "nidorina_icon.png"
+        },
+        {
+            "id": 31,
+            "name": {
+                "en": "Nidoqueen",
+                "fr": "Nidoqueen",
+                "es": "Nidoqueen"
+            },
+            "type": [8, 9],
+            "abilities": [],
+            "picture": "nidoqueen.png",
+            "icon": "nidoqueen_icon.png"
+        },
+        {
+            "id": 32,
+            "name": {
+                "en": "Nidoran♂",
+                "fr": "Nidoran♂",
+                "es": "Nidoran♂"
+            },
+            "type": [8],
+            "abilities": [],
+            "picture": "nidoran_male.png",
+            "icon": "nidoran_male_icon.png"
+        },
+        {
+            "id": 33,
+            "name": {
+                "en": "Nidorino",
+                "fr": "Nidorino",
+                "es": "Nidorino"
+            },
+            "type": [8],
+            "abilities": [],
+            "picture": "nidorino.png",
+            "icon": "nidorino_icon.png"
+        },
+        {
+            "id": 34,
+            "name": {
+                "en": "Nidoking",
+                "fr": "Nidoking",
+                "es": "Nidoking"
+            },
+            "type": [8, 9],
+            "abilities": [],
+            "picture": "nidoking.png",
+            "icon": "nidoking_icon.png"
+        },        
+        {
+            "id": 35,
+            "name": {
+                "en": "Clefairy",
+                "fr": "Mélofée",
+                "es": "Clefairy"
+            },
+            "type": [18],
+            "abilities": [],
+            "picture": "clefairy.png",
+            "icon": "clefairy_icon.png"
+        },
+        {
+            "id": 36,
+            "name": {
+                "en": "Clefable",
+                "fr": "Mélodelf",
+                "es": "Clefable"
+            },
+            "type": [18],
+            "abilities": [],
+            "picture": "clefable.png",
+            "icon": "clefable_icon.png"
+        },
+        {
+            "id": 37,
+            "name": {
+                "en": "Vulpix",
+                "fr": "Goupix",
+                "es": "Vulpix"
+            },
+            "type": [2],
+            "abilities": [],
+            "picture": "vulpix.png",
+            "icon": "vulpix_icon.png"
+        },
+        {
+            "id": 38,
+            "name": {
+                "en": "Ninetales",
+                "fr": "Feunard",
+                "es": "Ninetales"
+            },
+            "type": [2],
+            "abilities": [],
+            "picture": "ninetales.png",
+            "icon": "ninetales_icon.png"
+        },
+        {
+            "id": 60,
+            "name": {
+                "en": "Poliwag",
+                "fr": "Ptitard",
+                "es": "Poliwag"
+            },
+            "type": [3],
+            "abilities": [6, 11],
+            "picture": "poliwag.png",
+            "icon": "poliwag_icon.png"
+        },
+        {
+            "id": 72,
+            "name": {
+                "en": "Tentacool",
+                "fr": "Tentacool",
+                "es": "Tentacool"
+            },
+            "type": [3, 8],
+            "abilities": [29, 64],
+            "picture": "tentacool.png",
+            "icon": "tentacool_icon.png"
+        },
+        {
+            "id": 118,
+            "name": {
+                "en": "Goldeen",
+                "fr": "Poissirène",
+                "es": "Goldeen"
+            },
+            "type": [3],
+            "abilities": [33, 41],
+            "picture": "goldeen.png",
+            "icon": "goldeen_icon.png"
+        },
+        {
+            "id": 129,
+            "name": {
+                "en": "Magikarp",
+                "fr": "Magicarp",
+                "es": "Magikarp"
+            },
+            "type": [3],
+            "abilities": [33, 155],
+            "picture": "magikarp.png",
+            "icon": "magikarp_icon.png"
+        }
+    ],
+    "Places": [
+        {
+            "id": 1,
+            "name": {
+                "en": "Pallet Town",
+                "fr": "Bourg Palette",
+                "es": "Pueblo Paleta"
+            },
+            "pokemonIds": [60, 72, 118, 129]
+        },
+        {
+            "id": 2,
+            "name": {
+                "en": "Route 1 of Kanto",
+                "fr": "Route 1 de Kanto",
+                "es": "Ruta 1 de Kanto"
+            },
+            "pokemonIds": [16, 19]
+        },
+        {
+            "id": 3,
+            "name": {
+                "en": "Viridian City",
+                "fr": "Céladopole",
+                "es": "Ciudad Verde"
+            },
+            "pokemonIds": [60, 72, 118, 129]
+        },
+        {
+            "id": 4,
+            "name": {
+                "en": "Route 2 of Kanto",
+                "fr": "Route 2 de Kanto",
+                "es": "Ruta 2 de Kanto"
+            },
+            "pokemonIds": [10, 13, 16, 19]
+        },
+        {
+            "id": 5,
+            "name": {
+                "en": "Pewter City",
+                "fr": "Argenta",
+                "es": "Ciudad Plata"
+            }
+        },
+        {
+            "id": 6,
+            "name": {
+                "en": "Route 3 of Kanto",
+                "fr": "Route 3 de Kanto",
+                "es": "Ruta 3 de Kanto"
+            },
+            "pokemonIds": [16, 19, 21, 27, 39, 56]
+        }
+    ]
+}

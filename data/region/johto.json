@@ -1,0 +1,66 @@
+{
+    "Pokemons": [
+        {
+        "id": 152,
+        "name": {
+            "en": "Chikorita",
+            "fr": "Germignon",
+            "es": "Chikorita"
+        },
+        "type": [5],
+        "abilities": ["Overgrow", "Leaf Guard"],
+        "picture": "chikorita.png",
+        "icon": "chikorita_icon.png"
+        },
+        {
+        "id": 155,
+        "name": {
+            "en": "Cyndaquil",
+            "fr": "Feuille",
+            "es": "Cyndaquil"
+        },
+        "type": [2],
+        "abilities": ["Blaze", "Flash Fire"],
+        "picture": "cyndaquil.png",
+        "icon": "cyndaquil_icon.png"
+        },
+        {
+        "id": 158,
+        "name": {
+            "en": "Totodile",
+            "fr": "Kaiminus",
+            "es": "Totodile"
+        },
+        "type": [3],
+        "abilities": ["Torrent", "Sheer Force"],
+        "picture": "totodile.png",
+        "icon": "totodile_icon.png"
+        }
+    ],
+    "Places": [
+        {
+            "id": 1,
+            "name": {
+                "en": "New Bark Town",
+                "fr": "Bourg Geon",
+                "es": "Nueva Bark"
+            }
+        },
+        {
+            "id": 2,
+            "name": {
+                "en": "Route 29 of Johto",
+                "fr": "Route 29 de Johto",
+                "es": "Ruta 29 de Johto"
+            }
+        },
+        {
+            "id": 3,
+            "name": {
+                "en": "Cherrygrove City",
+                "fr": "Ville Griotte",
+                "es": "Ciudad Cerezo"
+            }
+        }
+    ]
+}

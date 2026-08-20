@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéParty</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase (synchro multijoueur) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+</head>
+<body>
+    <!-- === NAVBAR === -->
+    <nav id="navbar">
+        <div class="navbar-bar">
+            <span class="navbar-title">PokéParty</span>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+        <ul id="navbar-links">
+            <li><a href="#" data-region="kanto">Kanto</a></li>
+            <li><a href="#" data-region="johto">Johto</a></li>
+            <li><a href="#" data-region="hoenn">Hoenn</a></li>
+            <li><a href="#" data-region="sinnoh">Sinnoh</a></li>
+            <li><a href="#" data-region="unova">Unova</a></li>
+            <li><a href="#" data-region="kalos">Kalos</a></li>
+            <li><a href="#" data-region="alola">Alola</a></li>
+            <li><a href="#" data-region="galar">Galar</a></li>
+            <li><a href="#" data-region="paldea">Paldea</a></li>
+            <li>
+                <select id="language-select">
+                    <option value="en" selected>English</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- === ACCUEIL / CONNEXION === -->
+        <div id="welcome-screen" class="container">
+            <h1 id="welcome-title">Welcome to PokéParty!</h1>
+            <p id="welcome-text">Test your knowledge of Pokémon with friends, live.</p>
+
+            <div class="connect-block">
+                <h3 id="create-title">Create a game</h3>
+                <input type="text" id="host-name-input" placeholder="Your name">
+                <br>
+                <button id="create-room-btn">Create</button>
+            </div>
+
+            <div class="connect-block">
+                <h3 id="join-title">Join a game</h3>
+                <input type="text" id="player-name-input" placeholder="Your name">
+                <input type="text" id="join-code-input" placeholder="Code" maxlength="4" style="text-transform:uppercase; width:100px;">
+                <br>
+                <button id="join-room-btn">Join</button>
+            </div>
+
+            <p id="regions-hint" class="hint">Selected regions above (top menu) will be used for everyone in the game you create. Only Kanto and Johto have data ready for now.</p>
+        </div>
+
+        <!-- === SALON D'ATTENTE === -->
+        <div id="lobby-screen" class="container" style="display:none;">
+            <h2 id="lobby-title">Waiting room</h2>
+            <div id="room-code-display" class="room-code">----</div>
+            <ul id="player-list"></ul>
+            <p id="loading-hint" class="hint" style="display:none;">Loading Pokémon data…</p>
+            <button id="start-quiz-btn" style="display:none;">Start Quiz</button>
+            <p id="lobby-waiting" class="hint" style="display:none;">Waiting for the host to start…</p>
+        </div>
+
+        <!-- === QUIZ === -->
+        <div id="quiz-screen" class="container" style="display:none;">
+            <div id="progress"></div>
+            <div id="score">Score: 0</div>
+            <div id="timer">Time left: 12s</div>
+            <h2 id="question"></h2>
+            <div id="options" class="options"></div>
+        </div>
+
+        <!-- === CLASSEMENT === -->
+        <div id="board-screen" class="container" style="display:none;">
+            <h2 id="board-title">Leaderboard</h2>
+            <ol id="board-list"></ol>
+            <button id="restart-btn" style="display:none;">New game</button>
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <p id="footer-text"> Pokémon © Nintendo / Game Freak / The Pokémon Company. 
+                This is an unofficial fan-made website, not affiliated with or endorsed by Nintendo, Game Freak, or The Pokémon Company.</p>
+        </div>
+    </footer>
+</body>
+</html>

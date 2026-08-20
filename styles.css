@@ -1,0 +1,499 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 30px;
+}
+
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+button {
+    padding: 12px 20px;
+    margin-top: 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #764ba2;
+}
+
+button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+
+/* NAVBAR */
+#navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed; /* reste en haut de la page */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    position: relative;
+}
+
+#navbar li {
+    margin: 5px 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#navbar a:hover {
+    background-color: #667eea;
+}
+
+a[data-region].active {
+    background-color: #764ba2;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* === SELECT LANGUE === */
+#navbar ul li select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    padding: 8px 38px 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: background-color 0.25s, box-shadow 0.25s, transform 0.15s;
+    background-image: url('data:image/svg+xml;utf8,\<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">\<path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+}
+
+#navbar ul li select:hover {
+    background-color: #667eea;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+#navbar ul li select:focus {
+    outline: none;
+    background-color: #764ba2;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+#navbar ul li select option {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    line-height: 1.6;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: none;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+#score {
+    position: relative;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+#progress {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #888;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.plus-one {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 5px;
+    font-weight: bold;
+    color: black;
+    animation: moveUpFade 1s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes moveUpFade {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-30px); }
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.option {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option:hover {
+    border-color: #667eea;
+    background: #f0f0f0;
+}
+
+.option img {
+    width: 80px;
+    height: 80px;
+}
+
+.voters-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+    min-height: 20px;
+}
+.voter-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Footer sticky en bas */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .footer-content {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* ===================== NOUVEAU : ÉCRANS MULTIJOUEUR ===================== */
+
+.connect-block {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+.connect-block:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 10px;
+}
+.connect-block h3 {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1rem;
+}
+
+input[type=text] {
+    padding: 10px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    margin: 4px 6px 4px 0;
+    outline: none;
+    transition: border-color 0.2s;
+}
+input[type=text]:focus {
+    border-color: #667eea;
+}
+
+.hint {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 20px;
+}
+
+.room-code {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: #764ba2;
+    background: #f4f2fb;
+    border: 2px dashed #764ba2;
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: inline-block;
+    margin: 10px 0 20px;
+}
+
+#player-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+#player-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background: #fafafa;
+}
+.player-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+#board-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+#board-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background: #fafafa;
+}
+#board-list li.top1 {
+    border-color: #764ba2;
+    background: #f4f2fb;
+}
+#board-list .rank {
+    font-weight: bold;
+    color: #764ba2;
+    width: 24px;
+}
+#board-list .pname {
+    flex: 1;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Curseurs des autres joueurs en direct */
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-2px, -2px);
+    transition: left 0.08s cubic-bezier(.2,.8,.2,1), top 0.08s cubic-bezier(.2,.8,.2,1);
+}
+.cursor .arrow {
+    display: block;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.35));
+}
+.cursor .label {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #fff;
+    padding: 4px 11px;
+    border-radius: 20px;
+    white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    letter-spacing: 0.2px;
+}
+
+/* ===================== RESPONSIVE MOBILE ===================== */
+.navbar-bar { display: none; }
+.menu-toggle { display: none; }
+
+@media (max-width: 640px) {
+    main {
+        padding-top: 54px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container {
+        padding: 18px 16px;
+        width: 100%;
+    }
+
+    /* Navbar : menu burger au lieu de la liste affichée en continu */
+    #navbar { padding: 0; }
+    .navbar-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 14px;
+    }
+    .navbar-title {
+        color: #fff;
+        font-weight: 700;
+        font-size: 14.5px;
+        letter-spacing: 0.3px;
+    }
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: #2b2b2b;
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 8px;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 0;
+        margin-top: 0;
+    }
+    #navbar ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #2b2b2b;
+        padding: 6px 14px 14px;
+        gap: 2px;
+        max-height: 75vh;
+        overflow-y: auto;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+        flex-wrap: nowrap;
+    }
+    #navbar ul.open { display: flex; }
+    #navbar li { margin: 2px 0; width: 100%; }
+    #navbar a { display: block; padding: 11px 12px; font-size: 14.5px; }
+    #navbar ul li select {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin: 8px 0 0;
+        font-size: 14px;
+        padding: 10px 30px 10px 14px;
+    }
+
+    h1, #welcome-title { font-size: 1.3rem; }
+    #welcome-text { font-size: 0.9rem; }
+    .question-text, #question { font-size: 1.05rem; }
+
+    /* Écran de connexion : beaucoup plus compact */
+    .connect-block { padding-top: 14px; margin-top: 14px; }
+    .connect-block h3 { font-size: 0.9rem; margin-bottom: 8px; }
+    .hint { font-size: 0.72rem; margin-top: 12px; }
+
+    input[type=text] {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 0 8px;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    button {
+        width: 100%;
+        padding: 11px 18px;
+        font-size: 14.5px;
+        margin-top: 8px;
+    }
+
+    .room-code {
+        font-size: 1.7rem;
+        letter-spacing: 5px;
+        padding: 10px 16px;
+        margin: 8px 0 14px;
+    }
+
+    .options { gap: 8px; }
+    .option { padding: 8px; }
+    .option img { width: 64px; height: 64px; }
+
+    .voter-dot { width: 18px; height: 18px; font-size: 10px; }
+
+    .cursor .label { font-size: 10.5px; padding: 3px 9px; }
+}
+
+@media (max-width: 380px) {
+    .option img { width: 56px; height: 56px; }
+    .room-code { font-size: 1.4rem; letter-spacing: 3px; }
+}

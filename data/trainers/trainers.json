@@ -1,0 +1,114 @@
+{
+    "Trainers": [
+        {
+            "id": 1,
+            "name": {
+                "en": "Blue",
+                "fr": "Blue",
+                "es": "Azul"
+            },
+            "picture": "blue.png",
+            "icon": "blue_icon.png",
+            "Pokemons": [1, 2, 3, 4, 5, 6, 7, 8, 9, 16, 17, 18, 19, 20, 21, 22, 27, 28, 37, 38, 58, 59, 63, 64, 65, 68, 81, 82, 90, 91, 102, 103, 111, 112, 128, 130, 133, 134, 135, 136, 142, 214, 248, 464]
+        },
+        {
+            "id": 2,
+            "name": {
+                "en": "Brock",
+                "fr": "Pierre",
+                "es": "Brock"
+            },
+            "picture": "brock.png",
+            "icon": "brock_icon.png",
+            "Pokemons": [74, 75, 76, 95, 111, 139, 141, 142, 248, 369, 409, 464]
+        },
+        {
+            "id": 3,
+            "name": {
+                "en": "Misty",
+                "fr": "Ondine",
+                "es": "Misty"
+            },
+            "picture": "misty.png",
+            "icon": "misty_icon.png",
+            "Pokemons": [54, 55, 80, 87, 119, 120, 121, 130, 131, 134, 171, 195, 350, 419, 565, 581, 593]
+        },
+        {
+            "id": 4,
+            "name": {
+                "en": "Lt. Surge",
+                "fr": "Major Bob",
+                "es": "Lt. Surge"
+            },
+            "picture": "surge.png",
+            "icon": "surge_icon.png",
+            "Pokemons": [25, 26, 81, 82, 100, 101, 125, 135, 171, 181, 310, 417, 462, 466]
+        },
+        {
+            "id": 5,
+            "name": {
+                "en": "Erika",
+                "fr": "Erika",
+                "es": "Erika"
+            },
+            "picture": "erika.png",
+            "icon": "erika_icon.png",
+            "Pokemons": [3, 44, 45, 47, 70, 71, 103, 114, 182, 189, 275, 346, 407, 460, 465]
+        },
+        {
+            "id": 6,
+            "name": {
+                "en": "Koga",
+                "fr": "Koga",
+                "es": "Koga"
+            },
+            "picture": "koga.png",
+            "icon": "koga_icon.png",
+            "Pokemons": [42, 48, 49, 73, 89, 109, 110, 168, 169, 205, 317, 435, 454]
+        },
+        {
+            "id": 7,
+            "name": {
+                "en": "Sabrina",
+                "fr": "Morgane",
+                "es": "Sabrina"
+            },
+            "picture": "sabrina.png",
+            "icon": "sabrina_icon.png",
+            "Pokemons": [49, 63, 64, 65, 80, 97, 103, 122, 124, 196, 199, 202, 376, 475, 561]
+        },
+        {
+            "id": 8,
+            "name": {
+                "en": "Blaine",
+                "fr": "Auguste",
+                "es": "Blaine"
+            },
+            "picture": "blaine.png",
+            "icon": "blaine_icon.png",
+            "Pokemons": [6, 38, 58, 59, 77, 78, 126, 136, 219, 229, 323, 324, 467]
+        },
+        {
+            "id": 9,
+            "name": {
+                "en": "Giovanni",
+                "fr": "Giovanni",
+                "es": "Giovanni"
+            },
+            "picture": "giovanni.png",
+            "icon": "giovanni_icon.png",
+            "Pokemons": [28, 31, 33, 34, 51, 53, 76, 95, 105, 111, 112, 115, 130, 150, 430, 445, 450, 464, 472, 553]
+        },
+        {
+            "id": 10,
+            "name":{
+                "en": "Lorelei",
+                "fr": "Olga",
+                "es": "Lorelei"
+            },
+            "picture": "lorelei.png",
+            "icon": "lorelei_icon.png",
+            "Pokemons": [28.1, 80, 87, 91, 124, 131, 221]
+        }
+    ]
+}

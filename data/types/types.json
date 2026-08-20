@@ -1,0 +1,148 @@
+{
+    "types": [
+        {
+            "id": 1,
+            "name": {
+                "en": "Normal",
+                "fr": "Normal",
+                "es": "Normal"
+            }
+        },
+        {
+            "id": 2,
+            "name": {
+                "en": "Fire",
+                "fr": "Feu",
+                "es": "Fuego"
+            }
+        },
+        {
+            "id": 3,
+            "name": {
+                "en": "Water",
+                "fr": "Eau",
+                "es": "Agua"
+            }
+        },
+        {
+            "id": 4,
+            "name": {
+                "en": "Electric",
+                "fr": "Électrik",
+                "es": "Eléctrico"
+            }
+        },
+        {
+            "id": 5,
+            "name": {
+                "en": "Grass",
+                "fr": "Plante",
+                "es": "Planta"
+            }
+        },
+        {
+            "id": 6,
+            "name": {
+                "en": "Ice",
+                "fr": "Glace",
+                "es": "Hielo"
+            }
+        },
+        {
+            "id": 7,
+            "name": {
+                "en": "Fighting",
+                "fr": "Combat",
+                "es": "Lucha"
+            }
+        },
+        {
+            "id": 8,
+            "name": {
+                "en": "Poison",
+                "fr": "Poison",
+                "es": "Veneno"
+            }
+        },
+        {
+            "id": 9,
+            "name": {
+                "en": "Ground",
+                "fr": "Sol",
+                "es": "Tierra"
+            }
+        },
+        {
+            "id": 10,
+            "name": {
+                "en": "Flying",
+                "fr": "Vol",
+                "es": "Volador"
+            }
+        },
+        {
+            "id": 11,
+            "name": {
+                "en": "Psychic",
+                "fr": "Psy",
+                "es": "Psíquico"
+            }
+        },
+        {
+            "id": 12,
+            "name": {
+                "en": "Bug",
+                "fr": "Insecte",
+                "es": "Bicho"
+            }
+        },
+        {
+            "id": 13,
+            "name": {
+                "en": "Rock",
+                "fr": "Roche",
+                "es": "Roca"
+            }
+        },
+        {
+            "id": 14,
+            "name": {
+                "en": "Ghost",
+                "fr": "Spectre",
+                "es": "Fantasma"
+            }
+        },
+        {
+            "id": 15,
+            "name": {
+                "en": "Dragon",
+                "fr": "Dragon",
+                "es": "Dragón"
+            }
+        },
+        {
+            "id": 16,
+            "name": {
+                "en": "Dark",
+                "fr": "Ténèbres",
+                "es": "Siniestro"
+            }
+        },
+        {
+            "id": 17,
+            "name": {
+                "en": "Steel",
+                "fr": "Acier",
+                "es": "Acero"
+            }
+        },
+        {
+            "id": 18,
+            "name": {
+                "en": "Fairy",
+                "fr": "Fée",
+                "es": "Hada"
+            }
+        }
+    ]
+}
