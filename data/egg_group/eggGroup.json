@@ -1,0 +1,116 @@
+{
+    "eggGroup":[
+        {
+            "id": 1,
+            "name": {
+                "en": "Monster",
+                "fr": "Monstreux",
+                "es": "Monstruo"
+            }
+        },
+        {
+            "id": 2,
+            "name": {
+                "en": "Human-Like",
+                "fr": "Humanoïde",
+                "es": "Humanoide"
+            }
+        },
+        {
+            "id": 3,
+            "name":{
+                "en": "Water 1",
+                "fr": "Aquatique 1",
+                "es": "Agua 1"
+            }
+        },
+        {
+            "id": 4,
+            "name":{
+                "en": "Water 2",
+                "fr": "Aquatique 2",
+                "es": "Agua 2"
+            }
+        },
+        {
+            "id": 5,
+            "name":{
+                "en": "Water 3",
+                "fr": "Aquatique 3",
+                "es": "Agua 3"
+            }
+        },
+        {
+            "id": 6,
+            "name":{
+                "en": "Bug",
+                "fr": "Insectoïde",
+                "es": "Bicho"
+            }
+        },
+        {
+            "id": 7,
+            "name":{
+                "en": "Mineral",
+                "fr": "Minéral",
+                "es": "Mineral"
+            }
+        },
+        {
+            "id": 8,
+            "name":{
+                "en": "Flying",
+                "fr": "Aérien",
+                "es": "Volador"
+            }
+        },
+        {
+            "id": 9,
+            "name":{
+                "en": "Amorphous",
+                "fr": "Amorphe",
+                "es": "Amorfo"
+            }
+        },
+        {
+            "id": 10,
+            "name":{
+                "en": "Field",
+                "fr": "Terrestre",
+                "es": "Campo"
+            }
+        },
+        {
+            "id": 11,
+            "name":{
+                "en": "Fairy",
+                "fr": "Féerique",
+                "es": "Hada"
+            }
+        },
+        {
+            "id": 12,
+            "name":{
+                "en": "Grass",
+                "fr": "Végétal",
+                "es": "Planta"
+            }
+        },
+        {
+            "id": 13,
+            "name":{
+                "en": "Dragon",
+                "fr": "Draconique",
+                "es": "Dragón"
+            }
+        },
+        {
+            "id": 14,
+            "name":{
+                "en": "No Eggs Discovered",
+                "fr": "Inconnu",
+                "es": "Desconocido"
+            }
+        }
+    ]
+}

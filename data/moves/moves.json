@@ -1,0 +1,22 @@
+{
+    "moves": [
+        {
+            "id": 1,
+            "name": { 
+                "en": "Pound",
+                "fr": "Écras'Face",
+                "es": "Destructor"
+            },
+            "type": "Normal",
+            "category": "Physique"
+        },
+        {
+            "id": 2,
+            "name": { 
+                "fr": "Poing Karaté" 
+            },
+            "type": "Combat",
+            "category": "Physique"
+        }
+    ]
+}

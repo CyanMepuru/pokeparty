@@ -1,0 +1,2460 @@
+{
+    "abilities": [
+        {
+        "id": 1,
+        "name": {
+            "en": "Stench",
+            "fr": "Puanteur",
+            "es": "Hedor"
+            }
+        },
+        {
+        "id": 2,
+        "name":{
+            "en": "Drizzle",
+            "fr": "Crachin",
+            "es": "Llovizna"
+            }
+        },
+        {
+        "id": 3,
+        "name":{
+            "en": "Speed Boost",
+            "fr": "Turbo",
+            "es": "Impulso"
+            }
+        },
+        {
+        "id": 4,
+        "name":{
+            "en": "Battle Armor",
+            "fr": "Armurbaston",
+            "es": "Armadura Batalla"
+            }
+        },
+        {
+        "id": 5,
+        "name":{
+            "en": "Sturdy",
+            "fr": "Solide",
+            "es": "Firme"
+            }
+        },
+        {
+        "id": 6,
+        "name":{
+            "en": "Damp",
+            "fr": "Humide",
+            "es": "Humedad"
+            }
+        },
+        {
+        "id": 7,
+        "name":{
+            "en": "Limber",
+            "fr": "Souplesse",
+            "es": "Flexibilidad"
+            }
+        },
+        {
+        "id": 8,
+        "name":{
+            "en": "Sand Veil",
+            "fr": "Voile Sable",
+            "es": "Velo Arena"
+            }
+        },
+        {
+            "id": 9,
+            "name": {
+            "en": "Static",
+            "fr": "Statique",
+            "es": "Estático"
+            }
+        },
+        {
+            "id": 10,
+            "name": {
+            "en": "Volt Absorb",
+            "fr": "Absorb Volt",
+            "es": "Absorbe Electricidad"
+            }
+        },
+        {
+            "id": 11,
+            "name": {
+            "en": "Water Absorb",
+            "fr": "Absorb Eau",
+            "es": "Absorbe Agua"
+            }
+        },
+        {
+            "id": 12,
+            "name": {
+            "en": "Oblivious",
+            "fr": "Inébranlable",
+            "es": "Despiste"
+            }
+        },
+        {
+            "id": 13,
+            "name": {
+            "en": "Cloud Nine",
+            "fr": "Neuf Cieux",
+            "es": "Nueve Nubes"
+            }
+        },
+        {
+            "id": 14,
+            "name": {
+            "en": "Compound Eyes",
+            "fr": "Yeux Composés",
+            "es": "Ojos Compuestos"
+            }
+        },
+        {
+            "id": 15,
+            "name": {
+            "en": "Insomnia",
+            "fr": "Insomnie",
+            "es": "Insomnio"
+            }
+        },
+        {
+            "id": 16,
+            "name": {
+            "en": "Color Change",
+            "fr": "Changement Couleur",
+            "es": "Cambio Color"
+            }
+        },
+        {
+            "id": 17,
+            "name": {
+            "en": "Immunity",
+            "fr": "Immunité",
+            "es": "Inmunidad"
+            }
+        },
+        {
+            "id": 18,
+            "name": {
+            "en": "Flash Fire",
+            "fr": "Brasier",
+            "es": "Ignífugo"
+            }
+        },
+        {
+            "id": 19,
+            "name": {
+            "en": "Shield Dust",
+            "fr": "Bouclier Anti-Bruit",
+            "es": "Polvo Escudo"
+            }
+        },
+        {
+            "id": 20,
+            "name": {
+            "en": "Own Tempo",
+            "fr": "Calque",
+            "es": "Ritmo Propio"
+            }
+        },
+        {
+            "id": 21,
+            "name": {
+            "en": "Suction Cups",
+            "fr": "Ventouse",
+            "es": "Ventosas"
+            }
+        },
+        {
+            "id": 22,
+            "name": {
+            "en": "Intimidate",
+            "fr": "Intimidation",
+            "es": "Intimidación"
+            }
+        },
+        {
+            "id": 23,
+            "name": {
+            "en": "Shadow Tag",
+            "fr": "Marque Ombre",
+            "es": "Marca Sombra"
+            }
+        },
+        {
+            "id": 24,
+            "name": {
+            "en": "Rough Skin",
+            "fr": "Peau Dure",
+            "es": "Piel Tosca"
+            }
+        },
+        {
+            "id": 25,
+            "name": {
+            "en": "Wonder Guard",
+            "fr": "Garde Mystik",
+            "es": "Guardia Maravilla"
+            }
+        },
+        {
+            "id": 26,
+            "name": {
+            "en": "Levitate",
+            "fr": "Lévitation",
+            "es": "Levitación"
+            }
+        },
+        {
+            "id": 27,
+            "name": {
+            "en": "Effect Spore",
+            "fr": "Pose Spore",
+            "es": "Esporas Tóxicas"
+            }
+        },
+        {
+            "id": 28,
+            "name": {
+            "en": "Synchronize",
+            "fr": "Synchro",
+            "es": "Sincronía"
+            }
+        },
+        {
+            "id": 29,
+            "name": {
+            "en": "Clear Body",
+            "fr": "Corps Sain",
+            "es": "Cuerpo Puro"
+            }
+        },
+        {
+            "id": 30,
+            "name": {
+            "en": "Natural Cure",
+            "fr": "Médic Nature",
+            "es": "Cura Natural"
+            }
+        },
+        {
+            "id": 31,
+            "name": {
+            "en": "Lightning Rod",
+            "fr": "Paratonnerre",
+            "es": "Pararrayos"
+            }
+        },
+        {
+            "id": 32,
+            "name": {
+            "en": "Serene Grace",
+            "fr": "Sérénité",
+            "es": "Gracia Serena"
+            }
+        },
+        {
+            "id": 33,
+            "name": {
+            "en": "Swift Swim",
+            "fr": "Glissade",
+            "es": "Nado Rápido"
+            }
+        },
+        {
+            "id": 34,
+            "name": {
+            "en": "Chlorophyll",
+            "fr": "Chlorophylle",
+            "es": "Clorofila"
+            }
+        },
+        {
+            "id": 35,
+            "name": {
+            "en": "Illuminate",
+            "fr": "Luminescence",
+            "es": "Iluminación"
+            }
+        },
+        {
+            "id": 36,
+            "name": {
+            "en": "Trace",
+            "fr": "Calque",
+            "es": "Rastro"
+            }
+        },
+        {
+            "id": 37,
+            "name": {
+            "en": "Huge Power",
+            "fr": "Coloforce",
+            "es": "Poderío"
+            }
+        },
+        {
+            "id": 38,
+            "name": {
+            "en": "Poison Point",
+            "fr": "Point Poison",
+            "es": "Punto Tóxico"
+            }
+        },
+        {
+            "id": 39,
+            "name": {
+            "en": "Inner Focus",
+            "fr": "Attention",
+            "es": "Foco Interno"
+            }
+        },
+        {
+            "id": 40,
+            "name": {
+            "en": "Magma Armor",
+            "fr": "Armumagma",
+            "es": "Armadura Magma"
+            }
+        },
+        {
+            "id": 41,
+            "name": {
+            "en": "Water Veil",
+            "fr": "Ignifu-Voile",
+            "es": "Velo Agua"
+            }
+        },
+        {
+            "id": 42,
+            "name": {
+            "en": "Magnet Pull",
+            "fr": "Magnépiège",
+            "es": "Imán"
+            }
+        },
+        {
+            "id": 43,
+            "name": {
+            "en": "Soundproof",
+            "fr": "Anti-Bruit",
+            "es": "Insonorizar"
+            }
+        },
+        {
+            "id": 44,
+            "name": {
+            "en": "Rain Dish",
+            "fr": "Cuvette",
+            "es": "Recogemojón"
+            }
+        },
+        {
+            "id": 45,
+            "name": {
+            "en": "Sand Stream",
+            "fr": "Sable Volant",
+            "es": "Chorro Arena"
+            }
+        },
+        {
+            "id": 46,
+            "name": {
+            "en": "Pressure",
+            "fr": "Pression",
+            "es": "Presión"
+            }
+        },
+        {
+            "id": 47,
+            "name": {
+            "en": "Thick Fat",
+            "fr": "Isograisse",
+            "es": "Grasa Densa"
+            }
+        },
+        {
+            "id": 48,
+            "name": {
+            "en": "Early Bird",
+            "fr": "Matinal",
+            "es": "Madrugar"
+            }
+        },
+        {
+            "id": 49,
+            "name": {
+            "en": "Flame Body",
+            "fr": "Corps Ardent",
+            "es": "Cuerpo Llama"
+            }
+        },
+        {
+            "id": 50,
+            "name": {
+            "en": "Run Away",
+            "fr": "Fuite",
+            "es": "Huida"
+            }
+        },
+        {
+            "id": 51,
+            "name": {
+            "en": "Keen Eye",
+            "fr": "Regard Vif",
+            "es": "Vista Lince"
+            }
+        },
+        {
+            "id": 52,
+            "name": {
+            "en": "Hyper Cutter",
+            "fr": "Hyper Cutter",
+            "es": "Corte Fuerte"
+            }
+        },
+        {
+            "id": 53,
+            "name": {
+            "en": "Pickup",
+            "fr": "Ramassage",
+            "es": "Recogida"
+            }
+        },
+        {
+            "id": 54,
+            "name": {
+            "en": "Truant",
+            "fr": "Absentéisme",
+            "es": "Vagabundo"
+            }
+        },
+        {
+            "id": 55,
+            "name": {
+            "en": "Hustle",
+            "fr": "Agitation",
+            "es": "Ajetreo"
+            }
+        },
+        {
+            "id": 56,
+            "name": {
+            "en": "Cute Charm",
+            "fr": "Joli Sourire",
+            "es": "Encanto"
+            }
+        },
+        {
+            "id": 57,
+            "name": {
+            "en": "Plus",
+            "fr": "Plus",
+            "es": "Más"
+            }
+        },
+        {
+            "id": 58,
+            "name": {
+            "en": "Minus",
+            "fr": "Moins",
+            "es": "Menos"
+            }
+        },
+        {
+            "id": 59,
+            "name": {
+            "en": "Forecast",
+            "fr": "Météo",
+            "es": "Predicción"
+            }
+        },
+        {
+            "id": 60,
+            "name": {
+            "en": "Sticky Hold",
+            "fr": "Glu",
+            "es": "Firmeza"
+            }
+        },
+        {
+            "id": 61,
+            "name": {
+            "en": "Shed Skin",
+            "fr": "Mue",
+            "es": "Mudar"
+            }
+        },
+        {
+            "id": 62,
+            "name": {
+            "en": "Guts",
+            "fr": "Cran",
+            "es": "Agallas"
+            }
+        },
+        {
+            "id": 63,
+            "name": {
+            "en": "Marvel Scale",
+            "fr": "Ecaille Spéciale",
+            "es": "Escama Mágica"
+            }
+        },
+        {
+            "id": 64,
+            "name": {
+            "en": "Liquid Ooze",
+            "fr": "Suintement",
+            "es": "Moco Líquido"
+            }
+        },
+        {
+            "id": 65,
+            "name": {
+            "en": "Overgrow",
+            "fr": "Engrais",
+            "es": "Espesura"
+            }
+        },
+        {
+            "id": 66,
+            "name": {
+            "en": "Blaze",
+            "fr": "Brasier",
+            "es": "Mar Llamas"
+            }
+        },
+        {
+            "id": 67,
+            "name": {
+            "en": "Torrent",
+            "fr": "Torrent",
+            "es": "Torrente"
+            }
+        },
+        {
+            "id": 68,
+            "name": {
+            "en": "Swarm",
+            "fr": "Essaim",
+            "es": "Enjambre"
+            }
+        },
+        {
+            "id": 69,
+            "name": {
+            "en": "Rock Head",
+            "fr": "Tête de Roc",
+            "es": "Cabeza Roca"
+            }
+        },
+        {
+            "id": 70,
+            "name": {
+            "en": "Drought",
+            "fr": "Sécheresse",
+            "es": "Sequía"
+            }
+        },
+        {
+            "id": 71,
+            "name": {
+            "en": "Arena Trap",
+            "fr": "Piège Sable",
+            "es": "Trampa Arena"
+            }
+        },
+        {
+            "id": 72,
+            "name": {
+            "en": "Vital Spirit",
+            "fr": "Esprit Vital",
+            "es": "Espíritu Vital"
+            }
+        },
+        {
+            "id": 73,
+            "name": {
+            "en": "White Smoke",
+            "fr": "Écran Fumée",
+            "es": "Humo Blanco"
+            }
+        },
+        {
+            "id": 74,
+            "name": {
+            "en": "Pure Power",
+            "fr": "Force Pure",
+            "es": "Poder Puro"
+            }
+        },
+        {
+            "id": 75,
+            "name": {
+            "en": "Shell Armor",
+            "fr": "Coque Armure",
+            "es": "Caparazón"
+            }
+        },
+        {
+            "id": 76,
+            "name": {
+            "en": "Air Lock",
+            "fr": "Air Lock",
+            "es": "Cielo Raso"
+            }
+        },
+        {
+            "id": 77,
+            "name": {
+            "en": "Tangled Feet",
+            "fr": "Pieds Confus",
+            "es": "Pies Atados"
+            }
+        },
+        {
+            "id": 78,
+            "name": {
+            "en": "Motor Drive",
+            "fr": "Motorisé",
+            "es": "Motor"
+            }
+        },
+        {
+            "id": 79,
+            "name": {
+            "en": "Rivalry",
+            "fr": "Rivalité",
+            "es": "Rivalidad"
+            }
+        },
+        {
+            "id": 80,
+            "name": {
+            "en": "Steadfast",
+            "fr": "Impassible",
+            "es": "Firmeza"
+            }
+        },
+        {
+            "id": 81,
+            "name": {
+            "en": "Snow Cloak",
+            "fr": "Rideau Neige",
+            "es": "Manto Níveo"
+            }
+        },
+        {
+            "id": 82,
+            "name": {
+            "en": "Gluttony",
+            "fr": "Gloutonnerie",
+            "es": "Glotonería"
+            }
+        },
+        {
+            "id": 83,
+            "name": {
+            "en": "Anger Point",
+            "fr": "Colérique",
+            "es": "Punto Ira"
+            }
+        },
+        {
+            "id": 84,
+            "name": {
+            "en": "Unburden",
+            "fr": "Délestage",
+            "es": "Aligerar"
+            }
+        },
+        {
+            "id": 85,
+            "name": {
+            "en": "Heatproof",
+            "fr": "Ignifugé",
+            "es": "Resistencia"
+            }
+        },
+        {
+            "id": 86,
+            "name": {
+            "en": "Simple",
+            "fr": "Simple",
+            "es": "Simple"
+            }
+        },
+        {
+            "id": 87,
+            "name": {
+            "en": "Dry Skin",
+            "fr": "Peau Sèche",
+            "es": "Piel Seca"
+            }
+        },
+        {
+            "id": 88,
+            "name": {
+            "en": "Download",
+            "fr": "Télécharge",
+            "es": "Descarga"
+            }
+        },
+        {
+            "id": 89,
+            "name": {
+            "en": "Iron Fist",
+            "fr": "Poing de Fer",
+            "es": "Puño Férreo"
+            }
+        },
+        {
+            "id": 90,
+            "name": {
+            "en": "Poison Heal",
+            "fr": "Soin Poison",
+            "es": "Antídoto"
+            }
+        },
+        {
+            "id": 91,
+            "name": {
+            "en": "Adaptability",
+            "fr": "Adaptabilité",
+            "es": "Adaptabilidad"
+            }
+        },
+        {
+            "id": 92,
+            "name": {
+            "en": "Skill Link",
+            "fr": "Multi-Coups",
+            "es": "Vínculo Habilidad"
+            }
+        },
+        {
+            "id": 93,
+            "name": {
+            "en": "Hydration",
+            "fr": "Hydratation",
+            "es": "Hidratación"
+            }
+        },
+        {
+            "id": 94,
+            "name": {
+            "en": "Solar Power",
+            "fr": "Force Soleil",
+            "es": "Poder Solar"
+            }
+        },
+        {
+            "id": 95,
+            "name": {
+            "en": "Quick Feet",
+            "fr": "Pieds Véloces",
+            "es": "Pies Rápidos"
+            }
+        },
+        {
+            "id": 96,
+            "name": {
+            "en": "Normalize",
+            "fr": "Normalise",
+            "es": "Normalidad"
+            }
+        },
+        {
+            "id": 97,
+            "name": {
+            "en": "Sniper",
+            "fr": "Sniper",
+            "es": "Francotirador"
+            }
+        },
+        {
+            "id": 98,
+            "name": {
+            "en": "Magic Guard",
+            "fr": "Garde Magik",
+            "es": "Muro Mágico"
+            }
+        },
+        {
+            "id": 99,
+            "name": {
+            "en": "No Guard",
+            "fr": "Annule Garde",
+            "es": "Sin Guardia"
+            }
+        },
+        {
+            "id": 100,
+            "name": {
+            "en": "Stall",
+            "fr": "Frein",
+            "es": "Demora"
+            }
+        },
+        {
+            "id": 101,
+            "name": {
+            "en": "Technician",
+            "fr": "Technicien",
+            "es": "Técnico"
+            }
+        },
+        {
+            "id": 102,
+            "name": {
+            "en": "Leaf Guard",
+            "fr": "Feuille Garde",
+            "es": "Hoja Protectora"
+            }
+        },
+        {
+            "id": 103,
+            "name": {
+            "en": "Klutz",
+            "fr": "Maladresse",
+            "es": "Desastre"
+            }
+        },
+        {
+            "id": 104,
+            "name": {
+            "en": "Mold Breaker",
+            "fr": "Brise Moule",
+            "es": "Rompemoldes"
+            }
+        },
+        {
+            "id": 105,
+            "name": {
+            "en": "Super Luck",
+            "fr": "Chanceux",
+            "es": "Suerte"
+            }
+        },
+        {
+            "id": 106,
+            "name": {
+            "en": "Aftermath",
+            "fr": "Boom Final",
+            "es": "Secuelas"
+            }
+        },
+        {
+            "id": 107,
+            "name": {
+            "en": "Anticipation",
+            "fr": "Anticipation",
+            "es": "Anticipación"
+            }
+        },
+        {
+            "id": 108,
+            "name": {
+            "en": "Forewarn",
+            "fr": "Prédiction",
+            "es": "Aviso Previo"
+            }
+        },
+        {
+            "id": 109,
+            "name": {
+            "en": "Unaware",
+            "fr": "Inconscient",
+            "es": "Desconocimiento"
+            }
+        },
+        {
+            "id": 110,
+            "name": {
+            "en": "Tinted Lens",
+            "fr": "Lentiteintée",
+            "es": "Lente Tinte"
+            }
+        },
+        {
+            "id": 111,
+            "name": {
+            "en": "Filter",
+            "fr": "Filtre",
+            "es": "Filtro"
+            }
+        },
+        {
+            "id": 112,
+            "name": {
+            "en": "Slow Start",
+            "fr": "Début Calme",
+            "es": "Inicio Lento"
+            }
+        },
+        {
+            "id": 113,
+            "name": {
+            "en": "Scrappy",
+            "fr": "Querelleur",
+            "es": "Pendenciero"
+            }
+        },
+        {
+            "id": 114,
+            "name": {
+            "en": "Storm Drain",
+            "fr": "Lavabo",
+            "es": "Drenaje"
+            }
+        },
+        {
+            "id": 115,
+            "name": {
+            "en": "Ice Body",
+            "fr": "Corps Gel",
+            "es": "Cuerpo Helado"
+            }
+        },
+        {
+            "id": 116,
+            "name": {
+            "en": "Solid Rock",
+            "fr": "Solide Roc",
+            "es": "Roca Sólida"
+            }
+        },
+        {
+            "id": 117,
+            "name": {
+            "en": "Snow Warning",
+            "fr": "Alerte Neige",
+            "es": "Aviso Nieve"
+            }
+        },
+        {
+            "id": 118,
+            "name": {
+            "en": "Honey Gather",
+            "fr": "Cherche Miel",
+            "es": "Recolectamiel"
+            }
+        },
+        {
+            "id": 119,
+            "name": {
+            "en": "Frisk",
+            "fr": "Fouille",
+            "es": "Cacheo"
+            }
+        },
+        {
+            "id": 120,
+            "name": {
+            "en": "Reckless",
+            "fr": "Téméraire",
+            "es": "Temerario"
+            }
+        },
+        {
+            "id": 121,
+            "name": {
+            "en": "Multitype",
+            "fr": "Multi-Type",
+            "es": "Multitipo"
+            }
+        },
+        {
+            "id": 122,
+            "name": {
+            "en": "Flower Gift",
+            "fr": "Don Floral",
+            "es": "Regalo Floral"
+            }
+        },
+        {
+            "id": 123,
+            "name": {
+            "en": "Bad Dreams",
+            "fr": "Mauvais Rêve",
+            "es": "Mal Sueño"
+            }
+        },
+        {
+            "id": 124,
+            "name": {
+            "en": "Pickpocket",
+            "fr": "Pickpocket",
+            "es": "Carterista"
+            }
+        },
+        {
+            "id": 125,
+            "name": {
+            "en": "Sheer Force",
+            "fr": "Sans Limite",
+            "es": "Fuerza Bruta"
+            }
+        },
+        {
+            "id": 126,
+            "name": {
+            "en": "Contrary",
+            "fr": "Constestation",
+            "es": "Contrario"
+            }
+        },
+        {
+            "id": 127,
+            "name": {
+            "en": "Unnerve",
+            "fr": "Tension",
+            "es": "Inquietud"
+            }
+        },
+        {
+            "id": 128,
+            "name": {
+            "en": "Defiant",
+            "fr": "Acharné",
+            "es": "Desafío"
+            }
+        },
+        {
+            "id": 129,
+            "name": {
+                "en": "defeatist",
+                "fr": "Défaitiste",
+                "es": "Desalentado"
+            }
+        },
+        {
+            "id": 130,
+            "name": {
+                "en": "Cursed Body",
+                "fr": "Corps Maudit",
+                "es": "Cuerpo Maldito"
+            }
+        },
+        {
+            "id": 131,
+            "name": {
+                "en": "Healer",
+                "fr": "Coeur Soin",
+                "es": "Sanador"
+            }
+        },
+        {
+            "id": 132,
+            "name": {
+                "en": "Friend Guard",
+                "fr": "Garde-Ami",
+                "es": "Defensa Amiga"
+            }
+        },
+        {
+            "id": 133,
+            "name": {
+                "en": "Weak Armor",
+                "fr": "Armurouillée",
+                "es": "Armadura Débil"
+            }
+        },
+        {
+            "id": 134,
+            "name": {
+                "en": "Heavy Metal",
+                "fr": "Heavy Metal",
+                "es": "Metal Pesado"
+            }
+        },
+        {
+            "id": 135,
+            "name": {
+                "en": "Light Metal",
+                "fr": "Light Metal",
+                "es": "Metal Ligero"
+            }
+        },
+        {
+            "id": 136,
+            "name": {
+                "en": "Multiscale",
+                "fr": "Multiécaille",
+                "es": "Multiescamas"
+            }
+        },
+        {
+            "id": 137,
+            "name": {
+                "en": "Toxic Boost",
+                "fr": "Rage Poison",
+                "es": "Impulso Tóxico"
+            }
+        },
+        {
+            "id": 138,
+            "name": {
+                "en": "Flare Boost",
+                "fr": "Rage Brûlure",
+                "es": "Impulso Ígneo"
+            }
+        },
+        {
+            "id": 139,
+            "name": {
+                "en": "Harvest",
+                "fr": "Récolte",
+                "es": "Cosecha"
+            }
+        },
+        {
+            "id": 140,
+            "name": {
+                "en": "Telepathy",
+                "fr": "Télépathe",
+                "es": "Telepatía"
+            }
+        },
+        {
+            "id": 141,
+            "name": {
+                "en": "Moody",
+                "fr": "Lunatique",
+                "es": "Cambiante"
+            }
+        },
+        {
+            "id": 142,
+            "name": {
+                "en": "Overcoat",
+                "fr": "Envelocape",
+                "es": "Sayo Protector"
+            }
+        },
+        {
+            "id": 143,
+            "name": {
+                "en": "Poison Touch",
+                "fr": "Toxitouche",
+                "es": "Toque Tóxico"
+            }
+        },
+        {
+            "id": 144,
+            "name": {
+                "en": "Regenerator",
+                "fr": "Régé-Force",
+                "es": "Regeneración"
+            }
+        },
+        {
+            "id": 145,
+            "name": {
+                "en": "Big Pecks",
+                "fr": "Coeur de Coq",
+                "es": "Pico Grande"
+            }
+        },
+        {
+            "id": 146,
+            "name": {
+                "en": "Sand Rush",
+                "fr": "Baigne Sable",
+                "es": "Ímpetu Arena"
+            }
+        },
+        {
+            "id": 147,
+            "name": {
+                "en": "Wonder Skin",
+                "fr": "Peau Miracle",
+                "es": "Piel Maravilla"
+            }
+        },
+        {
+            "id": 148,
+            "name": {
+                "en": "Analytic",
+                "fr": "Analyste",
+                "es": "Analítico"
+            }
+        },
+        {
+            "id": 149,
+            "name": {
+                "en": "Illusion",
+                "fr": "Illusion",
+                "es": "Ilusión"
+            }
+        },
+        {
+            "id": 150,
+            "name": {
+                "en": "Imposter",
+                "fr": "Imposteur",
+                "es": "Impostor"
+            }
+        },
+        {
+            "id": 151,
+            "name": {
+                "en": "Infiltrator",
+                "fr": "Infiltration",
+                "es": "Infiltrado"
+            }
+        },
+        {
+            "id": 152,
+            "name": {
+                "en": "Mummy",
+                "fr": "Momie",
+                "es": "Momia"
+            }
+        },
+        {
+            "id": 153,
+            "name": {
+                "en": "Moxie",
+                "fr": "Impudence",
+                "es": "Atrevimiento"
+            }
+        },
+        {
+            "id": 154,
+            "name": {
+                "en": "Justified",
+                "fr": "Coeur Noble",
+                "es": "Justiciero"
+            }
+        },
+        {
+            "id": 155,
+            "name": {
+                "en": "Rattled",
+                "fr": "Phobique",
+                "es": "Desconcertado"
+            }
+        },
+        {
+            "id": 156,
+            "name": {
+                "en": "Magic Bounce",
+                "fr": "Miroir Magik",
+                "es": "Magia Rebotadora"
+            }
+        },
+        {
+            "id": 157,
+            "name": {
+                "en": "Sap Sipper",
+                "fr": "Herbivore",
+                "es": "Fitofago"
+            }
+        },
+        {
+            "id": 158,
+            "name": {
+                "en": "Prankster",
+                "fr": "Farceur",
+                "es": "Tramposo"
+            }
+        },
+        {
+            "id": 159,
+            "name": {
+                "en": "Sand Force",
+                "fr": "Force Sable",
+                "es": "Fuerza Arena"
+            }
+        },
+        {
+            "id": 160,
+            "name": {
+                "en": "Iron Barbs",
+                "fr": "Épines de Fer",
+                "es": "Púas Acero"
+            }
+        },
+        {
+            "id": 161,
+            "name": {
+                "en": "Zen Mode",
+                "fr": "Mode Transe",
+                "es": "Modo Zen"
+            }
+        },
+        {
+            "id": 162,
+            "name": {
+                "en": "Victory Star",
+                "fr": "Victorieux",
+                "es": "Estrella Victoria"
+            }
+        },
+        {
+            "id": 163,
+            "name": {
+                "en": "Turboblaze",
+                "fr": "Turbo Brasier",
+                "es": "Turbollama"
+            }
+        },
+        {
+            "id": 164,
+            "name": {
+                "en": "Teravolt",
+                "fr": "Téra-Voltage",
+                "es": "Teravoltio"
+            }
+        },
+        {
+            "id": 165,
+            "name": {
+                "en": "Aroma Veil",
+                "fr": "Aroma-Voile",
+                "es": "Velo Aroma"
+            }
+        },
+        {
+            "id": 166,
+            "name": {
+                "en": "Flower Veil",
+                "fr": "Flora-Voile",
+                "es": "Velo Flor"
+            }
+        },
+        {
+            "id": 167,
+            "name": {
+                "en": "Cheek Pouch",
+                "fr": "Bajoues",
+                "es": "Mejillas Almacenaje"
+            }
+        },
+        {
+            "id": 168,
+            "name": {
+                "en": "Protean",
+                "fr": "Protéen",
+                "es": "Mutatipo"
+            }
+        },
+        {
+            "id": 169,
+            "name": {
+                "en": "Fur Coat",
+                "fr": "Toisson Épaisse",
+                "es": "Pelaje"
+            }
+        },
+        {
+            "id": 170,
+            "name": {
+                "en": "Magician",
+                "fr": "Magicien",
+                "es": "Mago"
+            }
+        },
+        {
+            "id": 171,
+            "name": {
+                "en": "Bulletproof",
+                "fr": "Pare-Balles",
+                "es": "Parabala"
+            }
+        },
+        {
+            "id": 172,
+            "name": {
+                "en": "Competitive",
+                "fr": "Battant",
+                "es": "Competitivo"
+            }
+        },
+        {
+            "id": 173,
+            "name": {
+                "en": "Strong Jaw",
+                "fr": "Prognathe",
+                "es": "Mandíbula Fuerte"
+            }
+        },
+        {
+            "id": 174,
+            "name": {
+                "en": "Refrigerate",
+                "fr": "Peau Gelée",
+                "es": "Refrigeración"
+            }
+        },
+        {
+            "id": 175,
+            "name": {
+                "en": "Sweet Veil",
+                "fr": "Gluco-Voile",
+                "es": "Velo Dulce"
+            }
+        },
+        {
+            "id": 176,
+            "name": {
+                "en": "Stance Change",
+                "fr": "Déclic Tactique",
+                "es": "Cambio de Postura"
+            }
+        },
+        {
+            "id": 177,
+            "name": {
+                "en": "Gale Wings",
+                "fr": "Ailes Bourrasque",
+                "es": "Alas Vendaval"
+            }
+        },
+        {
+            "id": 178,
+            "name": {
+                "en": "Mega Launcher",
+                "fr": "Méga Blaster",
+                "es": "Megadisparador"
+            }
+        },
+        {
+            "id": 179,
+            "name": {
+                "en": "Grass Pelt",
+                "fr": "Toison Herbue",
+                "es": "Pelaje Herbáceo"
+            }
+        },
+        {
+            "id": 180,
+            "name": {
+                "en": "Symbiosis",
+                "fr": "Symbiose",
+                "es": "Simbiosis"
+            }
+        },
+        {
+            "id": 181,
+            "name": {
+                "en": "Tough Claws",
+                "fr": "Griffe Dure",
+                "es": "Garras Firmes"
+            }
+        },
+        {
+            "id": 182,
+            "name": {
+                "en": "Pixilate",
+                "fr": "Peau Féerique",
+                "es": "Pixilación"
+            }
+        },
+        {
+            "id": 183,
+            "name": {
+                "en": "Gooey",
+                "fr": "Poisseux",
+                "es": "Pegajoso"
+            }
+        },
+        {
+            "id": 184,
+            "name": {
+                "en": "Aerilate",
+                "fr": "Peau Céleste",
+                "es": "Aerilación"
+            }
+        },
+        {
+            "id": 185,
+            "name": {
+                "en": "Parental Bond",
+                "fr": "Amour Filial",
+                "es": "Vínculo Parental"
+            }
+        },
+        {
+            "id": 186,
+            "name": {
+                "en": "Dark Aura",
+                "fr": "Aura Ténébreuse",
+                "es": "Aura Oscura"
+            }
+        },
+        {
+            "id": 187,
+            "name": {
+                "en": "Fairy Aura",
+                "fr": "Aura Féerique",
+                "es": "Aura Hada"
+            }
+        },
+        {
+            "id": 188,
+            "name": {
+                "en": "Aura Break",
+                "fr": "Aura Inversée",
+                "es": "Rompeaura"
+            }
+        },
+        {
+            "id": 189,
+            "name": {
+                "en": "Primordial Sea",
+                "fr": "Mer Primaire",
+                "es": "Mar Primigenia"
+            }
+        },
+        {
+            "id": 190,
+            "name": {
+                "en": "Desolate Land",
+                "fr": "Terre Finale",
+                "es": "Tierra Desolada"
+            }
+        },
+        {
+            "id": 191,
+            "name": {
+                "en": "Delta Stream",
+                "fr": "Souffle Delta",
+                "es": "Corriente Delta"
+            }
+        },
+        {
+            "id": 192,
+            "name": {
+                "en": "Stamina",
+                "fr": "Endurance",
+                "es": "Resistencia"
+            }
+        },
+        {
+            "id": 193,
+            "name": {
+                "en": "Wimp Out",
+                "fr": "Escampette",
+                "es": "Cobardía"
+            }
+        },
+        {
+            "id": 194,
+            "name": {
+                "en": "Emergency Exit",
+                "fr": "Repli Tactique",
+                "es": "Salida de Emergencia"
+            }
+        },
+        {
+            "id": 195,
+            "name": {
+                "en": "Water Compaction",
+                "fr": "Sable Humide",
+                "es": "Compactación Agua"
+            }
+        },
+        {
+            "id": 196,
+            "name": {
+                "en": "Merciless",
+                "fr": "Cruauté",
+                "es": "Despiadado"
+            }
+        },
+        {
+            "id": 197,
+            "name": {
+                "en": "Shields Down",
+                "fr": "Bouclier-Carcan",
+                "es": "Escudos Bajos"
+            }
+        },
+        {
+            "id": 198,
+            "name": {
+                "en": "Stakeout",
+                "fr": "Filature",
+                "es": "Vigilancia"
+            }
+        },
+        {
+            "id": 199,
+            "name": {
+                "en": "Water Bubble",
+                "fr": "Aquabulle",
+                "es": "Burbuja Agua"
+            }
+        },
+        {
+            "id": 200,
+            "name": {
+                "en": "Steelworker",
+                "fr": "Expert Acier",
+                "es": "Metalúrgico"
+            }
+        },
+        {
+            "id": 201,
+            "name": {
+                "en": "Berserk",
+                "fr": "Folle Furie",
+                "es": "Rabia"
+            }
+        },
+        {
+            "id": 202,
+            "name": {
+                "en": "Slush Rush",
+                "fr": "Chasse-Neige",
+                "es": "Ímpetu Nieve"
+            }
+        },
+        {
+            "id": 203,
+            "name": {
+                "en": "Long Reach",
+                "fr": "Longue Portée",
+                "es": "Alcance Extendido"
+            }
+        },
+        {
+            "id": 204,
+            "name": {
+                "en": "Liquid Voice",
+                "fr": "Hydrata-Son",
+                "es": "Voz Líquida"
+            }
+        },
+        {
+            "id": 205,
+            "name": {
+                "en": "Triage",
+                "fr": "Prioguérison",
+                "es": "Triaje"
+            }
+        },
+        {
+            "id": 206,
+            "name": {
+                "en": "Galvanize",
+                "fr": "Peau Électrique",
+                "es": "Galvanismo"
+            }
+        },
+        {
+            "id": 207,
+            "name": {
+                "en": "Surge Surfer",
+                "fr": "Surf Caudal",
+                "es": "Surfista Voltio"
+            }
+        },
+        {
+            "id": 208,
+            "name": {
+                "en": "Schooling",
+                "fr": "Banc",
+                "es": "En Cardumen"
+            }
+        },
+        {
+            "id": 209,
+            "name": {
+                "en": "Disguise",
+                "fr": "Fantômasque",
+                "es": "Disfraz"
+            }
+        },
+        {
+            "id": 210,
+            "name": {
+                "en": "Battle Bond",
+                "fr": "Synergie",
+                "es": "Vínculo Batalla"
+            }
+        },
+        {
+            "id": 211,
+            "name": {
+                "en": "Power Construct",
+                "fr": "Rassemblement",
+                "es": "Cuerpo Ideal"
+            }
+        },
+        {
+            "id": 212,
+            "name": {
+                "en": "Corrosion",
+                "fr": "Corrosion",
+                "es": "Corrosión"
+            }
+        },
+        {
+            "id": 213,
+            "name": {
+                "en": "Comatose",
+                "fr": "Hypersommeil",
+                "es": "Comatoso"
+            }
+        },
+        {
+            "id": 214,
+            "name": {
+                "en": "Queenly Majesty",
+                "fr": "Prestance Royale",
+                "es": "Majestad"
+            }
+        },
+        {
+            "id": 215,
+            "name": {
+                "en": "Innards Out",
+                "fr": "Expuls'Organes",
+                "es": "Tripas Fuera"
+            }
+        },
+        {
+            "id": 216,
+            "name": {
+                "en": "Dancer",
+                "fr": "Danseuse",
+                "es": "Bailarín"
+            }
+        },
+        {
+            "id": 217,
+            "name": {
+                "en": "Battery",
+                "fr": "Batterie",
+                "es": "Batería"
+            }
+        },
+        {
+            "id": 218,
+            "name": {
+                "en": "Fluffy",
+                "fr": "Boule de Poils",
+                "es": "Esponjoso"
+            }
+        },
+        {
+            "id": 219,
+            "name": {
+                "en": "Dazzling",
+                "fr": "Corps Coloré",
+                "es": "Deslumbrante"
+            }
+        },
+        {
+            "id": 220,
+            "name": {
+                "en": "Soul-Heart",
+                "fr": "Animacoeur",
+                "es": "Alma Corazón"
+            }
+        },
+        {
+            "id": 221,
+            "name": {
+                "en": "Tangling Hair",
+                "fr": "Mèche Rebelle",
+                "es": "Pelo Enredador"
+            }
+        },
+        {
+            "id": 222,
+            "name": {
+                "en": "Receiver",
+                "fr": "Receveur",
+                "es": "Receptor"
+            }
+        },
+        {
+            "id": 223,
+            "name": {
+                "en": "Power of Alchemy",
+                "fr": "Osmose",
+                "es": "Poder de la Alquimia"
+            }
+        },
+        {
+            "id": 224,
+            "name": {
+                "en": "Beast Boost",
+                "fr": "Boost Chimère",
+                "es": "Impulso Bestia"
+            }
+        },
+        {
+            "id": 225,
+            "name": {
+                "en": "RKS System",
+                "fr": "Système Alpha",
+                "es": "Sistema RKS"
+            }
+        },
+        {
+            "id": 226,
+            "name": {
+                "en": "Electric Surge",
+                "fr": "Créa-Élec",
+                "es": "Electrogénesis"
+            }
+        },
+        {
+            "id": 227,
+            "name": {
+                "en": "Psychic Surge",
+                "fr": "Créa-Psy",
+                "es": "Psicoactivación"
+            }
+        },
+        {
+            "id": 228,
+            "name": {
+                "en": "Misty Surge",
+                "fr": "Créa-Brume",
+                "es": "Niebla Mística"
+            }
+        },
+        {
+            "id": 229,
+            "name": {
+                "en": "Grassy Surge",
+                "fr": "Créa-Herbe",
+                "es": "Herbopresencia"
+            }
+        },
+        {
+            "id": 230,
+            "name": {
+                "en": "Full Metal Body",
+                "fr": "Métallo-Garde",
+                "es": "Cuerpo Metálico"
+            }
+        },
+        {
+            "id": 231,
+            "name": {
+                "en": "Shadow Shield",
+                "fr": "Spectro-Bouclier",
+                "es": "Sombra Protectora"
+            }
+        },
+        {
+            "id": 232,
+            "name": {
+                "en": "Prism Armor",
+                "fr": "Prisme-Armure",
+                "es": "Armadura Prisma"
+            }
+        },
+        {
+            "id": 233,
+            "name": {
+                "en": "Neuroforce",
+                "fr": "Cérébro-Force",
+                "es": "Neurofuerza"
+            }
+        },
+        {
+            "id": 234,
+            "name": {
+                "en": "Intrepid Sword",
+                "fr": "Lame indomptable",
+                "es": "Espada Intrépida"
+            }
+        },
+        {
+            "id": 235,
+            "name": {
+                "en": "Dauntless Shield",
+                "fr": "Égide Inflexible",
+                "es": "Escudo Intrépido"
+            }
+        },
+        {
+            "id": 236,
+            "name": {
+                "en": "Libero",
+                "fr": "Libero",
+                "es": "Liberación"
+            }
+        },
+        {
+            "id": 237,
+            "name": {
+                "en": "Ball Fetch",
+                "fr": "Ramasse Ball",
+                "es": "Recoge Pelota"
+            }
+        },
+        {
+            "id": 238,
+            "name": {
+                "en": "Cotton Down",
+                "fr": "Effilochage",
+                "es": "Algodón Caído"
+            }
+        },
+        {
+            "id": 239,
+            "name": {
+                "en": "Propeller Tail",
+                "fr": "Propulseur",
+                "es": "Cola Hélice"
+            }
+        },
+        {
+            "id": 240,
+            "name": {
+                "en": "Mirror Armor",
+                "fr": "Armure Miroir",
+                "es": "Armadura Espejo"
+            }
+        },
+        {
+            "id": 241,
+            "name": {
+                "en": "Gulp Missile",
+                "fr": "Dégobage",
+                "es": "Misil Tragar"
+            }
+        },
+        {
+            "id": 242,
+            "name": {
+                "en": "Stalwart",
+                "fr": "Nerfs d'Acier",
+                "es": "Firme"
+            }
+        },
+        {
+            "id": 243,
+            "name": {
+                "en": "Steam Engine",
+                "fr": "Turbine",
+                "es": "Motor Vapor"
+            }
+        },
+        {
+            "id": 244,
+            "name": {
+                "en": "Punk Rock",
+                "fr": "Punk Rock",
+                "es": "Rock Punk"
+            }
+        },
+        {
+            "id": 245,
+            "name": {
+                "en": "Sand Spit",
+                "fr": "Expul'Sable",
+                "es": "Escupir Arena"
+            }
+        },
+        {
+            "id": 246,
+            "name": {
+                "en": "Ice Scales",
+                "fr": "Écailles Glacées",
+                "es": "Escamas de Hielo"
+            }
+        },
+        {
+            "id": 247,
+            "name": {
+                "en": "Ripen",
+                "fr": "Mûrissement",
+                "es": "Maduración"
+            }
+        },
+        {
+            "id": 248,
+            "name": {
+                "en": "Ice Face",
+                "fr": "Tête de Gel",
+                "es": "Cara de Hielo"
+            }
+        },
+        {
+            "id": 249,
+            "name": {
+                "en": "Power Spot",
+                "fr": "Cercle d'Énergie",
+                "es": "Zona de Poder"
+            }
+        },
+        {
+            "id": 250,
+            "name": {
+                "en": "Mimicry",
+                "fr": "Mimétisme",
+                "es": "Mimetismo"
+            }
+        },
+        {
+            "id": 251,
+            "name": {
+                "en": "Screen Cleaner",
+                "fr": "Brise-Barrière",
+                "es": "Limpiapantallas"
+            }
+        },
+        {
+            "id": 252,
+            "name": {
+                "en": "Steely Spirit",
+                "fr": "Boost Acier",
+                "es": "Espíritu Acero"
+            }
+        },
+        {
+            "id": 253,
+            "name": {
+                "en": "Perish Body",
+                "fr": "Corps Condamné",
+                "es": "Cuerpo Perecedero"
+            }
+        },
+        {
+            "id": 254,
+            "name": {
+                "en": "Wandering Spirit",
+                "fr": "Âme Vagabonde",
+                "es": "Espíritu Errante"
+            }
+        },
+        {
+            "id": 255,
+            "name": {
+                "en": "Gorilla Tactics",
+                "fr": "Entêtement",
+                "es": "Táctica Gorila"
+            }
+        },
+        {
+            "id": 256,
+            "name": {
+                "en": "Neutralizing Gas",
+                "fr": "Gaz Inhibiteur",
+                "es": "Gas Neutralizador"
+            }
+        },
+        {
+            "id": 257,
+            "name": {
+                "en": "Pastel Veil",
+                "fr": "Voile Pastel",
+                "es": "Velo Pastel"
+            }
+        },
+        {
+            "id": 258,
+            "name": {
+                "en": "Hunger Switch",
+                "fr": "Déclic Fringale",
+                "es": "Interruptor Hambre"
+            }
+        },
+        {
+            "id": 259,
+            "name": {
+                "en": "Quick Draw",
+                "fr": "Tir Vif",
+                "es": "Sacar Rápido"
+            }
+        },
+        {
+            "id": 260,
+            "name": {
+                "en": "Unseen Fist",
+                "fr": "Poing Invisible",
+                "es": "Puño Invisible"
+            }
+        },
+        {
+            "id": 261,
+            "name": {
+                "en": "Curious Medicine",
+                "fr": "Breuvage Suspect",
+                "es": "Medicina Curiosa"
+            }
+        },
+        {
+            "id": 262,
+            "name": {
+                "en": "Transistor",
+                "fr": "Transistor",
+                "es": "Transistor"
+            }
+        },
+        {
+            "id": 263,
+            "name": {
+                "en": "Dragons Maw",
+                "fr": "Dent de Dragon",
+                "es": "Mandíbula Dragón"
+            }
+        },
+        {
+            "id": 264,
+            "name": {
+                "en": "Chilling Neigh",
+                "fr": "Blanche Ruade",
+                "es": "Relincho Gélido"
+            }
+        },
+        {
+            "id": 265,
+            "name": {
+                "en": "Grim Neigh",
+                "fr": "Sombre Ruade",
+                "es": "Relincho Sombrío"
+            }
+        },
+        {
+            "id": 266,
+            "name": {
+                "en": "As One (Chilling Neigh)",
+                "fr": "Osmose Équine (Blanche Ruade)",
+                "es": "A Uno (Relincho Gélido)"
+            }
+        },
+        {
+            "id": 267,
+            "name": {
+                "en": "As One (Grim Neigh)",
+                "fr": "Osmose Équine (Sombre Ruade)",
+                "es": "A Uno (Relincho Sombrío)"
+            }
+        },
+        {
+            "id": 268,
+            "name": {
+                "en": "Earth Eater",
+                "fr": "Absorbe-Terre",
+                "es": "Devoratierra"
+            }
+        },
+        {
+            "id": 269,
+            "name": {
+                "en": "Mycelium Might",
+                "fr": "Force Fongique",
+                "es": "Poder Micelio"
+            }
+        },
+        {
+            "id": 270,
+            "name": {
+                "en": "Wind Rider",
+                "fr": "Aéroporté",
+                "es": "Montaraz"
+            }
+        },
+        {
+            "id": 271,
+            "name": {
+                "en": "Zero to Hero",
+                "fr": "Supermutation",
+                "es": "De Cero a Héroe"
+            }
+        },
+        {
+            "id": 272,
+            "name": {
+                "en": "Commander",
+                "fr": "Commandant",
+                "es": "Comandante"
+            }
+        },
+        {
+            "id": 273,
+            "name": {
+                "en": "Protosynthesis",
+                "fr": "Paléosynthèse",
+                "es": "Proto-Síntesis"
+            }
+        },
+        {
+            "id": 274,
+            "name": {
+                "en": "Hadron Engine",
+                "fr": "Moteur à Hadrons",
+                "es": "Motor de Hadrones"
+            }
+        },
+        {
+            "id": 275,
+            "name": {
+                "en": "Good as Gold",
+                "fr": "Corps en Or",
+                "es": "Corazón de Oro"
+            }
+        },
+        {
+            "id": 276,
+            "name": {
+                "en": "Supreme Overlord",
+                "fr": "Général Suprême",
+                "es": "Soberano Supremo"
+            }
+        },
+        {
+            "id": 277,
+            "name": {
+                "en": "Armor Tail",
+                "fr": "Armure Caudale",
+                "es": "Cola de Armadura"
+            }
+        },
+        {
+            "id": 278,
+            "name": {
+                "en": "Well-Baked Body",
+                "fr": "Bien Cuit",
+                "es": "Cuerpo Bien Cocido"
+            }
+        },
+        {
+            "id": 279,
+            "name": {
+                "en": "Tablets of Ruin",
+                "fr": "Bois du Fléau",
+                "es": "Tablas de Ruina"
+            }
+        },
+        {
+            "id": 280,
+            "name": {
+                "en": "Sword of Ruin",
+                "fr": "Épée du Fléau",
+                "es": "Espada de Ruina"
+            }
+        },
+        {
+            "id": 281,
+            "name": {
+                "en": "Beads of Ruin",
+                "fr": "Perles du Fléau",
+                "es": "Cuentas de Ruina"
+            }
+        },
+        {
+            "id": 282,
+            "name": {
+                "en": "Vessel of Ruin",
+                "fr": "Urne du Fléau",
+                "es": "Vasija de Ruina"
+            }
+        },
+        {
+            "id": 283,
+            "name": {
+                "en": "Quark Drive",
+                "fr": "Charge Quantique",
+                "es": "Cuark-Impulso"
+            }
+        },
+        {
+            "id": 284,
+            "name": {
+                "en": "Guard Dog",
+                "fr": "Chien de Garde",
+                "es": "Perro Guardián"
+            }
+        },
+        {
+            "id": 285,
+            "name": {
+                "en": "Costar",
+                "fr": "Collab",
+                "es": "Protagonista"
+            }
+        },
+        {
+            "id": 286,
+            "name": {
+                "en": "Anger Shell",
+                "fr": "Courroupace",
+                "es": "Caparazón Enfurecido"
+            }
+        },
+        {
+            "id": 287,
+            "name": {
+                "en": "Purifying Salt",
+                "fr": "Sel Purificateur",
+                "es": "Sal Purificadora"
+            }
+        },
+        {
+            "id": 288,
+            "name": {
+                "en": "Toxic Debris",
+                "fr": "Dépot Toxique",
+                "es": "Escombros Tóxicos"
+            }
+        },
+        {
+            "id": 289,
+            "name": {
+                "en": "Electromorphosis",
+                "fr": "Grecharge",
+                "es": "Electromorfosis"
+            }
+        },
+        {
+            "id": 290,
+            "name": {
+                "en": "Sharpness",
+                "fr": "Incisif",
+                "es": "Afilado"
+            }
+        },
+        {
+            "id": 291,
+            "name": {
+                "en": "Lingering Aroma",
+                "fr": "Odeur Tenace",
+                "es": "Aroma Persistente"
+            }
+        },
+        {
+            "id": 292,
+            "name": {
+                "en": "Opportunist",
+                "fr": "Opportuniste",
+                "es": "Oportunista"
+            }
+        },
+        {
+            "id": 293,
+            "name": {
+                "en": "Rocky Payload",
+                "fr": "Porte-Rocher",
+                "es": "Carga Rocosa"
+            }
+        },
+        {
+            "id": 294,
+            "name": {
+                "en": "Orichalcum Pulse",
+                "fr": "Pouls Orichalque",
+                "es": "Pulso Oricalco"
+            }
+        },
+        {
+            "id": 295,
+            "name": {
+                "en": "Cud Chew",
+                "fr": "Ruminant",
+                "es": "Masticador de Bolas"
+            }
+        },
+        {
+            "id": 296,
+            "name": {
+                "en": "Seed Sower",
+                "fr": "Semencier",
+                "es": "Sembrador"
+            }
+        },
+        {
+            "id": 297,
+            "name": {
+                "en": "Thermal Exchange",
+                "fr": "Thermodynamique",
+                "es": "Intercambio Térmico"
+            }
+        },
+        {
+            "id": 298,
+            "name": {
+                "en": "Wind Power",
+                "fr": "Turbine Éolienne",
+                "es": "Energía Eólica"
+            }
+        },
+        {
+            "id": 299,
+            "name": {
+                "en": "Hospitality",
+                "fr": "Aux Petits Soins",
+                "es": "Hospitalidad"
+            }
+        },
+        {
+            "id": 300,
+            "name": {
+                "en": "Toxic Chain",
+                "fr": "Chaîne Toxique",
+                "es": "Cadena Tóxica"
+            }
+        },
+        {
+            "id": 301,
+            "name": {
+                "en": "Embody Aspect",
+                "fr": "Force Mémorielle",
+                "es": "Personificar Aspecto"
+            }
+        },
+        {
+            "id": 302,
+            "name": {
+                "en": "Supersweet Syrup",
+                "fr": "Nectar Mielleux",
+                "es": "Jarabe Supersweet"
+            }
+        },
+        {
+            "id": 303,
+            "name": {
+                "en": "Mind's Eye",
+                "fr": "Oeil Révélateur",
+                "es": "Mente Infinita"
+            }
+        },
+        {
+            "id": 304,
+            "name": {
+                "en": "Tera Shift",
+                "fr": "Téramorphose",
+                "es": "Cambio Tera"
+            }
+        },
+        {
+            "id": 305,
+            "name": {
+                "en": "Tera Shell",
+                "fr": "Téra-Carapace",
+                "es": "Tera-Armadura"
+            }
+        },
+        {
+            "id": 306,
+            "name": {
+                "en": "Teraform Zero",
+                "fr": "Téraformation 0",
+                "es": "Teraformación Cero"
+            }
+        },
+        {
+            "id": 307,
+            "name": {
+                "en": "Poison Puppeteer",
+                "fr": "Emprise Toxique",
+                "es": "Títere tóxico"
+            }
+        }
+    ]
+}
